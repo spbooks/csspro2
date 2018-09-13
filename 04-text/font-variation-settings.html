@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Master: Chapter 4: Working with Text: The font-variation-settings property</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <style>
+
+      @font-face {
+          font-family: 'Amstelvar';
+          src: url('amstelvar/fonts/Amstelvar-Roman-VF.ttf');
+          /* Future-proof format syntax. See http://clagnut.com/blog/2391 */
+          src: url('amstelvar/fonts/Amstelvar-Roman-VF.ttf') format('truetype', supports variations);
+          font-weight: 100 900;
+      }
+     
+      .setting__explain {
+        font-size: 90%
+      }
+
+      [type=range] {
+        display: block;
+        width: 90%;
+      }
+
+      .demo__wrapper {
+        font-family: 'Amstelvar';
+        flex: 0 0 60%;
+        overflow: auto;
+        height: 80rem;
+      }
+
+      h1 {
+        font-family: inherit;
+      }
+
+      .demo__wrapper b {
+        font-weight: 500;
+      }
+
+      .font__variation__settings {
+        overflow-y: scroll;
+        height: 80rem;
+      }
+
+      .font__variation__settings p + p {
+        margin: 2rem 0;
+      }
+      .font__variation__settings > div {
+        padding: 2rem;
+      }
+
+      .font__variation__settings > :first-child,
+      .font__variation__settings > :last-child {
+        text-align: right;
+      }
+
+      .setting__explain {
+        margin-left: 6ch;
+        font-size: 1.2rem;
+      }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+          <h2>Using the <code>font-variation-settings</code> property</h2>
+          <p>With the <code>font-variation-settings</code> property, we can also use CSS to modify the appearance of a range of font features &mdash; <em>if</em> the font supports it. <a href="https://github.com/TypeNetwork/Amstelvar">Amstelvar</a> is one of those fonts.</p>
+
+          <p>Note that each of the values below is an <em>axis</em> defined by the font itself.</p>
+
+          <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-fonts-4/" class="amstelvarital">CSS Fonts Module Level 4</a></p>
+
+          <div class="two__panels">
+            <div class="demo__wrapper">   
+              <p>Pack my box with five dozen liquor jugs.</p>
+            </div>
+
+            <form action="/none" method="GET" class="demo__controls font__variation__settings">  
+                <p><button type="reset">Reset all</button></p>
+                <p>
+                  <label for="font-size">font-size</label><span class="setting__explain">(<code>rem</code> units)</span>
+                  <input type="range" id="font-size" name="font-size" min="1" max="20" value="3" step="0.25">
+                  <output class="range__label" for="font-size" name="font-size_output"></output>
+                </p>
+
+                <p>
+                  <label for="opsz">opsz</label><span class="setting__explain" id="opsz-explain">(optical sizing)</span>
+                  <input type="range" id="opsz" name="opsz" min="8" max="144" value="12" aria-describedby="opsz-explain">
+                  <output class="range__label" for="opsz" name="opsz_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="wght">wght</label><span class="setting__explain" id="wght-explain">(weight)</span>
+                  <input type="range" id="wght" name="wght" min="1" max="1000" value="400" aria-describedby="wght-explain">
+                  <output class="range__label" for="wght" name="wght_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="wdth">wdth</label><span class="setting__explain" id="wdth-explain">(width)</span>
+                  <input type="range" id="wdth" name="wdth" min="60" max="200" value="100" aria-describedby="wdth-explain">
+                  <output class="range__label" for="wdth" name="wdth_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="GRAD">GRAD</label><span class="setting__explain" id="GRAD-explain">(grade)</span>
+                  <input type="range" id="GRAD" name="GRAD" min="-60" max="60" value="0" aria-describedby="GRAD-explain">
+                  <output class="range__label" for="GRAD" name="GRAD_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="XOPQ">XOPQ</label><span class="setting__explain" id="XOPQ-explain">(x opaque)</span>
+                  <input type="range" id="XOPQ" name="XOPQ" min="18" max="287" value="88" aria-describedby="XOPQ-explain">
+                  <output class="range__label" for="XOPQ" name="XOPQ_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="XTRA">XTRA</label><span class="setting__explain" id="XTRA-explain">(x transparent)</span>
+                  <input type="range" id="XTRA" name="XTRA" min="57" max="892" value="402" aria-describedby="XTRA-explain">
+                  <output class="range__label" for="XTRA" name="XTRA_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YOPQ">YOPQ</label><span class="setting__explain" id="YOPQ-explain">(y opaque)</span>
+                  <input type="range" id="YOPQ" name="YOPQ" min="8" max="102" value="62" aria-describedby="YOPQ-explain">
+                  <output class="range__label" for="YOPQ" name="YOPQ_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTLC">YTLC</label><span class="setting__explain" id="YTLC-explain">(y transparent lowercase)</span>
+                  <input type="range" id="YTLC" name="YTLC" min="420" max="570" value="500" aria-describedby="YTLC-explain">
+                  <output class="range__label" for="YTLC" name="YTLC_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTUC">YTUC</label><span class="setting__explain" id="YTUC-explain">(y transparent uppercase)</span>
+                  <input type="range" id="YTUC" name="YTUC" min="500" max="1000" value="750" aria-describedby="YTUC-explain">
+                  <output class="range__label" for="YTUC" name="YTUC_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTFG">YTFG</label><span class="setting__explain" id="YTFG-explain">(y transparent figure height)</span>
+                  <input type="range" id="YTFG" name="YTFG" min="425" max="1000" value="750" aria-describedby="YTFG-explain">
+                  <output class="range__label" for="YTFG" name="YTFG_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTDE">YTDE</label><span class="setting__explain" id="YTDE-explain">(y transparent lowercase descender)</span>
+                  <input type="range" id="YTDE" name="YTDE" min="-500" max="-138" value="-240" aria-describedby="YTDE-explain">
+                  <output class="range__label" for="YTDE" name="YTDE_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTAS">YTAS</label><span class="setting__explain" id="YTAS-explain">(y transparent lowercase ascender)</span>
+                  <input type="range" id="YTAS" name="YTAS" min="500" max="1000" value="750" aria-describedby="YTAS-explain">
+                  <output class="range__label" for="YTAS" name="YTAS_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="YTSE">YTSE</label><span class="setting__explain" id="YTSE-explain">(serif height / serif rise)</span>
+                  <input type="range" id="YTSE" name="YTSE" min="1" max="50" value="18" aria-describedby="YTSE-explain" step=".01">
+                  <output class="range__label" for="YTSE" name="YTSE_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="PWHT">PWHT</label><span class="setting__explain" id="PWHT-explain">(ParaWeight)</span>
+                  <input type="range" id="PWHT" name="PWHT" min="18" max="287" value="88" aria-describedby="PWHT-explain">
+                  <output class="range__label" for="PWHT" name="PWHT_output"></output>
+                </p>
+
+
+                <p>
+                  <label for="PWTH">PWTH</label><span class="setting__explain" id="PWTH-explain">(ParaWidth)</span>
+                  <input type="range" id="PWTH" name="PWTH" min="75" max="1179" value="490" aria-describedby="PWTH-explain">
+                  <output class="range__label" for="PWTH" name="PWTH_output"></output>
+                </p>
+                <p><button type="reset">Reset all</button></p>
+
+              </div>
+
+
+
+            </form>
+          </div>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+
+        <script>
+          const form = document.querySelector('.font__variation__settings');
+          const demo = document.querySelector('.demo__wrapper');
+          
+          const findInputs = (el) => el.nodeName === 'INPUT';
+
+          const buildfontVariationSettings = (arrayOfNameValueObjects) => {
+            const fvs = arrayOfNameValueObjects.map((item) => {            
+              form[item.name].nextElementSibling.value = item.value;     
+              return `"${item.name}" ${item.value}`;
+            });
+
+            demo.style.fontVariationSettings = fvs.join(', ');
+          }
+
+          const updateFontVariationSetting = (domEvent) => {
+            const target = domEvent.currentTarget;
+  
+            const values = Array.from(target.elements).filter(findInputs).map((e) => {
+              return { name: e.name, value: e.value };
+            });
+
+            /* Set the value of `font-size` */
+            const fontSize = values.shift();
+            demo.style.setProperty(fontSize.name, `${fontSize.value}rem`);
+            target[fontSize.name].nextElementSibling.value = `${target[fontSize.name].value}`;
+
+            buildfontVariationSettings(values);
+          }
+
+          const resetHandler = (domEvent) => {
+            const target = domEvent.currentTarget;
+  
+            const values = Array.from(domEvent.target.elements).filter(findInputs).map((e) => {
+              // getAttribute returns the authored DOM value,
+              // instead of the current value.
+              return { name: e.name, value: e.getAttribute('value') };
+            });
+
+            /* Set the value of `font-size` */
+            
+            demo.style.fontSize = '3rem';
+            target['font-size'].nextElementSibling.defaultValue = target['font-size'].getAttribute('value');
+
+            /* Remove font-size field from values list */
+            values.shift();
+            buildfontVariationSettings(values);
+          }
+
+          form.addEventListener('input', updateFontVariationSetting);
+          form.addEventListener('submit', (domEvent) => domEvent.preventDefault());
+          form.addEventListener('reset', resetHandler);
+          window.addEventListener('load', () => {const inputEvent = new Event('input'); form.dispatchEvent(inputEvent)});
+        </script>
+    </body>
+</html>

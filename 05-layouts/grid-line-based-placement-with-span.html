@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Using line-based placement, complex example</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        code {
+          white-space: nowrap;
+        }
+        .demo__grid {
+          display: grid;
+          font-size: 3rem;
+          font-weight: 100;
+        }
+
+        #a {
+            grid-column-start: span 10;
+        }
+        #b {
+            grid-column-start: span 5;
+        }
+        #c {
+            grid-column-start: span 5;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h2>Using line-based placement, simple example with span</h2>
+        <p>In this example, we've used the <code>span</code> keyword with <code>grid-column-start</code> to create this layout.</p>
+
+        <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+        <div class="demo__grid">
+          <div id="a">Grid item A</div>
+          <div id="b" class="text__light">Grid item B</div>
+          <div id="c">Grid item C</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 3: Using Custom Properties with Media Queries</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <style>
+        :root {
+          --base-font-size: 10px;
+          --opacity: 1;
+        }
+
+        @media print {
+            :root {
+                --base-font-size: 10pt;    
+            }
+        }
+
+        @media screen and (min-width: 40rem) {
+            :root {
+                --base-font-size: 20px;    
+            }
+        }
+
+        @media screen and (min-width: 66rem) {
+            :root {
+                --base-font-size: 30px;    
+            }
+        }
+
+        @media screen and (min-width: 100rem) {
+            :root {
+                --base-font-size: 40px;  
+            }
+        }
+
+        .demo__wrapper {
+          font-size: var(--base-font-size);
+          color: #666;  
+        }
+
+        /*
+         You can also use custom properties with the calc() function to, for
+         example, maintain typographic ratios despite the text size.
+        */
+ 
+        .demo__wrapper h1 {
+          font-size: calc( var(--base-font-size) * 1.5);
+          font-family: 'NotoSansBold', sans-serif;
+          color: #444;
+        }
+
+        .demo__wrapper p + p {
+          margin: calc(var(--base-font-size) * 1.5) 0;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 3 Custom Properties</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+      <main>
+          
+      <h2>Using Custom Properties with Media Queries</h2>
+  
+      <p>We can also use Custom Properties with <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank">Media Queries</a>. Adjust the viewport of this page to get a sense of how this works.</p>
+
+      <section class="demo__wrapper">
+        <h1>Custom property value changes at different viewport breakpoints</h1>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum congue sollicitudin. Nam nibh mi, blandit nec consequat at, imperdiet vel eros. Fusce tincidunt metus in elit euismod, at fringilla nulla condimentum. Ut dictum nibh non ante pretium, in dapibus nulla lobortis.</p>
+
+        <p>Aenean pharetra porta est, vitae imperdiet lacus eleifend id. Maecenas eget libero a turpis cursus ultrices sed ut risus. Praesent ut vehicula libero. Pellentesque posuere ultrices turpis, a bibendum massa.</p>
+
+        <p>Proin eleifend in massa id commodo. Nam maximus tempus nisl at aliquam. Phasellus hendrerit dapibus metus id euismod. Nullam tempus, sapien sit amet eleifend mattis, tellus risus tincidunt tellus, quis elementum massa nisi et eros.</p>
+
+      </section>
+
+      </main>
+
+    <footer>
+        <p>
+            Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+    </footer>
+  </body>
+</html>

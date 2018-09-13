@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ttFont sfntVersion="\x00\x01\x00\x00" ttLibVersion="3.29">
+
+  <fvar>
+
+    <!-- Optical Size -->
+    <Axis>
+      <AxisTag>opsz</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>8.0</MinValue>
+      <DefaultValue>12.0</DefaultValue>
+      <MaxValue>144.0</MaxValue>
+      <AxisNameID>256</AxisNameID>
+    </Axis>
+
+    <!-- Weight -->
+    <Axis>
+      <AxisTag>wght</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>1.0</MinValue>
+      <DefaultValue>400.0</DefaultValue>
+      <MaxValue>1000.0</MaxValue>
+      <AxisNameID>257</AxisNameID>
+    </Axis>
+
+    <!-- Width -->
+    <Axis>
+      <AxisTag>wdth</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>60.0</MinValue>
+      <DefaultValue>100.0</DefaultValue>
+      <MaxValue>200.0</MaxValue>
+      <AxisNameID>258</AxisNameID>
+    </Axis>
+
+    <!-- Grade -->
+    <Axis>
+      <AxisTag>GRAD</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>-60.0</MinValue>
+      <DefaultValue>0.0</DefaultValue>
+      <MaxValue>60.0</MaxValue>
+      <AxisNameID>259</AxisNameID>
+    </Axis>
+
+    <!-- x opaque -->
+    <Axis>
+      <AxisTag>XOPQ</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>18.0</MinValue>
+      <DefaultValue>88.0</DefaultValue>
+      <MaxValue>287.0</MaxValue>
+      <AxisNameID>260</AxisNameID>
+    </Axis>
+
+    <!-- x transparent -->
+    <Axis>
+      <AxisTag>XTRA</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>57.0</MinValue>
+      <DefaultValue>402.0</DefaultValue>
+      <MaxValue>892.0</MaxValue>
+      <AxisNameID>261</AxisNameID>
+    </Axis>
+
+    <!-- y opaque -->
+    <Axis>
+      <AxisTag>YOPQ</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>8.0</MinValue>
+      <DefaultValue>62.0</DefaultValue>
+      <MaxValue>102.0</MaxValue>
+      <AxisNameID>262</AxisNameID>
+    </Axis>
+
+    <!-- y transparent lowercase -->
+    <Axis>
+      <AxisTag>YTLC</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>420.0</MinValue>
+      <DefaultValue>500.0</DefaultValue>
+      <MaxValue>570.0</MaxValue>
+      <AxisNameID>263</AxisNameID>
+    </Axis>
+
+    <!-- y transparent uppercase -->
+    <Axis>
+      <AxisTag>YTUC</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>500.0</MinValue>
+      <DefaultValue>750.0</DefaultValue>
+      <MaxValue>1000.0</MaxValue>
+      <AxisNameID>264</AxisNameID>
+    </Axis>
+
+    <!-- y transparent figure height -->
+    <Axis>
+      <AxisTag>YTFG</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>425.0</MinValue>
+      <DefaultValue>750.0</DefaultValue>
+      <MaxValue>1000.0</MaxValue>
+      <AxisNameID>265</AxisNameID>
+    </Axis>
+
+    <!-- y transparent lowercase descender -->
+    <Axis>
+      <AxisTag>YTDE</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>-500.0</MinValue>
+      <DefaultValue>-240.0</DefaultValue>
+      <MaxValue>-138.0</MaxValue>
+      <AxisNameID>266</AxisNameID>
+    </Axis>
+
+    <!-- y transparent lowercase ascender -->
+    <Axis>
+      <AxisTag>YTAS</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>500.0</MinValue>
+      <DefaultValue>750.0</DefaultValue>
+      <MaxValue>1000.0</MaxValue>
+      <AxisNameID>267</AxisNameID>
+    </Axis>
+
+    <!-- serif rise -->
+    <Axis>
+      <AxisTag>YTSE</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>0.0</MinValue>
+      <DefaultValue>18.0</DefaultValue>
+      <MaxValue>50.0</MaxValue>
+      <AxisNameID>268</AxisNameID>
+    </Axis>
+
+    <!-- ParaWeight -->
+    <Axis>
+      <AxisTag>PWHT</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>18.0</MinValue>
+      <DefaultValue>88.0</DefaultValue>
+      <MaxValue>287.0</MaxValue>
+      <AxisNameID>269</AxisNameID>
+    </Axis>
+
+    <!-- ParaWidth -->
+    <Axis>
+      <AxisTag>PWTH</AxisTag>
+      <Flags>0x0</Flags>
+      <MinValue>75.0</MinValue>
+      <DefaultValue>490.0</DefaultValue>
+      <MaxValue>1179.0</MaxValue>
+      <AxisNameID>270</AxisNameID>
+    </Axis>
+  </fvar>
+
+</ttFont>

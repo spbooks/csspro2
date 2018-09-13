@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 3: Using Custom Properties with React Components</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <style>
+        .react__example {
+          background: #ddd;
+          padding: 1rem 2rem 2rem;
+        }
+
+        .field__button__group {
+          display: block;
+          font-family: 'NotoSansBold', sans-serif;
+          font-weight: bold;
+        }
+
+        .field__button__group > div {
+          display: flex;
+          margin-top: .5rem;
+        }
+
+        .field__button__group input {
+          border: none;
+          border-right-width: 0;
+          border-radius: .5rem 0 0 .5rem;
+          font-size: inherit;
+          padding: 0 .5rem;
+          flex: 1 1 15rem;
+        }
+        .field__button__group input:focus {
+          background: hsl(54, 100%, 90%);
+        }
+        .field__button__group button {
+          background: var(--button-bg-color, red);
+          border: 1px solid var(--button-bg-color, #374046);
+          border-radius: 0 .5rem .5rem 0;
+          color: #fff;
+          padding: 1rem 2rem;
+          font: inherit;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 3 Custom Properties</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+            
+        <h2>Using Custom Properties with ReactJS Components</h2>
+    
+        <p>Here we've used JavaScript to set the value of <code>--button-bg-color</code> using the <code>style</code> attribute. Although this example uses <a href="https://reactjs.org/" target="_blank">ReactJS</a>, the concept &mdash; setting the custom property via the style attribute &mdash; can be applied to other component-based frameworks.</p>
+
+        <div class="react__example">
+
+        
+
+        </div>
+
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+
+    <!--
+      The example in the book uses JSX <https://facebook.github.io/jsx/>.
+      Here we're using straight up ReactJS so that we don't have to set
+      up a build process.
+    -->
+
+    <script src="./js/react.production.min.js"></script>
+    <script src="./js/react-dom.production.min.js"></script>
+
+    <script>
+    /*
+      React.createElement accepts three arguments:
+      - type: the type of element to create, either a tag name or a React
+        component.
+      - props: a dictionary of key-value pairs. These become HTML attributes
+        if we're creating an HTML element.
+      - children: one or more child nodes. Can be text, elements, or an
+        array
+
+      https://reactjs.org/docs/react-api.html#createelement
+    */
+
+    class FieldButtonGroupWrapper extends React.Component {
+      render() {
+        const buttonStyle = {
+        '--button-bg-color': this.props.buttonBgColor   
+        };
+    
+        return React.createElement(
+          'div',
+          null,
+          React.createElement('input', {
+            type: this.props.inputType,
+            id: this.props.id
+          }, null),
+          React.createElement('button',
+            {
+              type: 'submit',
+              style: buttonStyle
+            }, this.props.buttonText)
+        );
+      }
+    }
+
+    class FieldButtonGroup extends React.Component {
+      render() {
+        return React.createElement(
+          'div',
+          {
+            className: this.props.cssClass
+          },
+          React.createElement('label', {id: this.props.id}, this.props.labelText),
+          React.createElement(FieldButtonGroupWrapper, {
+            id: this.props.id,
+            buttonBgColor: this.props.buttonBgColor,
+            buttonText: 'Example button text',
+            inputType: this.props.inputType
+          })
+        );
+      }
+    }
+
+    ReactDOM.render(
+      React.createElement(FieldButtonGroup,
+      { 
+        cssClass: 'field__button__group',
+        id: 'example_form_input',
+        buttonBgColor: 'rgb(103, 58, 183)',
+        buttonText: 'Button Text',
+        labelText: 'Example label text',
+        inputType: 'text'
+      }, null),
+      document.querySelector('.react__example')
+    );
+    </script>
+  </body>
+</html>

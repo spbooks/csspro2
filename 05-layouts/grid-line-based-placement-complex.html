@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Using line-based placement, complex example</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        code {
+          white-space: nowrap;
+        }
+        .demo__grid {
+          display: grid;
+          font-size: 3rem;
+          font-weight: 100;
+          /* Syntax: grid-template: [rows] / [columns] */
+          grid-template: repeat(5, 9.5rem) / repeat(10, 10%);
+        }
+
+        #a, #h {
+            grid-column-start: span 10;  /* Span the entire grid */
+        }
+
+        #b {
+            grid-row-start: span 3;
+            grid-column-start: span 2;
+        }
+
+        #c, #d {
+            grid-column-start: span 4;
+        }
+
+        #e, #f {
+            grid-column-start: span 3;
+        }
+
+        #f, #g {
+            grid-column-end: -1;  /* Begin from the container's ending edge. */
+        }
+
+        #g {
+            grid-column-start: span 5;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h2>Using line-based placement, complex example</h2>
+        <p>This is a more complex example. It also uses line-based placement, but incorporates the <code>grid-column-end</code> and <code>grid-row-start</code> properties, in addition to <code>grid-column-start</code>.</p>
+
+        <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+        <div class="demo__grid">
+          <div id="a">Grid item A</div>
+          <div id="b" class="text__light">Grid item B</div>
+          <div id="c">Grid item C</div>
+          <div id="d">Grid item D </div>
+          <div id="e">Grid item E</div>
+          <div id="f" class="text__light">Grid item F</div>
+          <div id="g" class="text__light">Grid item G</div>
+          <div id="h">Grid item H</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

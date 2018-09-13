@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout (CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="../js/escapereset.js" defer></script>
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        .demo__grid {
+          font-size: 3rem;
+          font-weight: 100;
+        }
+
+        .demo__grid {
+          background: #eee;
+          display: grid;
+          /*
+            These two lines can also be written using the grid
+            shorthand property. It uses the form
+
+            grid: <rows track list> / <columns track list>
+
+            This could also be written like so:
+
+            grid: 25rem 15rem / 25rem 40rem 25rem
+          */
+
+          grid-template-rows: 25rem 15rem;
+          grid-template-columns: 25rem 40rem 25rem;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h1>A simple, <b>explicit</b> grid layout</h1>
+        <p>The grid container, distinguished by a light gray background, is a block box with a <em>grid formatting context</em>. As a block box, it fills the width of its containers (the <code>body</code> element). We've explicitly defined three columns for this grid using <code>grid-template-columns: 25rem 40rem 25rem</code> and two rows using <code>grid-template-rows: 25rem 15rem;</code>. This is an example of an <a href="https://www.w3.org/TR/css-grid-1/#explicit-grids"><strong>explicit grid</strong></a>. When using lengths to specify grid track sizes, the grid may not fill the entire container.</p>
+
+
+<p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+
+
+        <div class="demo__grid">
+          <div>Grid item A</div>
+          <div class="text__light">
+            Grid item B
+          </div>
+          <div>
+            Grid item C
+          </div>
+          <div>Grid item D</div>
+          <div>Grid item E</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

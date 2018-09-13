@@ -7,13 +7,32 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/chapter8/svg.css">
-        <script src="../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="./css/svg.css">
+        <style>
+        [id=PinkCircle] {
+          display: block;
+          width: 50%;
+          max-width: 500px;
+          margin: auto;
+        }
+
+        [id=PinkCircle] circle {
+          transition: stroke-dasharray 1s ease-in;
+          fill: transparent;
+          stroke-dasharray: 0, 500;
+          stroke-width: 16;
+        }
+
+        [id=PinkCircle] .animate {
+          stroke-dasharray: 500, 0;
+        }
+        </style>
     </head>
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples</h1>
-            <a href="./index.html">Back to listing</a>
+            <a href="./index.html">Back to chapter demo list</a>
         </header>
 
         <main class="content">

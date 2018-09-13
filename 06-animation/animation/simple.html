@@ -3,18 +3,94 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CSS Master: Chapter 5 - Simple Transition</title>
-        <meta name="description" content="">
+        <title>CSS Master: Chapter 6 - Simple Transition</title>
+        <meta name="description" content="A simple CSS transition example.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../../css/base.css">
-        <link rel="stylesheet" href="../../css/chapter5/animsimple.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <style>
+        .larger {
+          font-size: 32px;
+        }
+        .larger a {
+          transition: 500ms;
+        }
+        .larger a:hover {
+          color: #f0c;
+        }
+
+        @-webkit-keyframes pulse {
+          from {
+            -webkit-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+            opacity: .8;
+          }
+          to {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        @keyframes pulse {
+          from {
+            -webkit-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+            opacity: .8;
+          }
+          to {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        .svgwrap {
+          padding: 1em;
+        }
+
+        .pulse svg {
+          -webkit-animation: pulse 500ms infinite;
+          animation: pulse 500ms infinite;
+        }
+
+        .rev svg {
+          -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+        }
+
+        .alt svg {
+          -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+        }
+
+        .alt-rev svg {
+          -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse;
+        }
+
+        .flex section {
+          width: 25%;
+          text-align: center;
+        }
+        .flex svg {
+          display: block;
+          margin: auto;
+        }
+
+        button > * {
+          pointer-events: none;
+        }
+
+        </style>
 	</head>
         
     <body>
        <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
-            <a href="../index.html">Back to listing</a>
+            <nav><a href="../index.html">Back to chapter demo list</a></nav>
         </header>
 
         <main class="content">  
@@ -48,7 +124,7 @@
 
    
 
-        <script type="text/javascript" src="../../js/chapter5/stop-anim.js"></script>
+        <script type="text/javascript" src="../js/stop-anim.js"></script>
 
     </body>
 </html>

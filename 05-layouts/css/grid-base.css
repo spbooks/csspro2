@@ -1,0 +1,56 @@
+.demo__grid {
+  font-family: sans-serif;
+}
+
+.demo__grid > :first-child {
+  background: #FF5722;
+}
+
+.demo__grid > :nth-child(2) {
+  background: #9C27B0;
+}
+
+.demo__grid > :nth-child(3) {
+  background: #00BCD4;
+}
+
+.demo__grid > :nth-child(4) {
+  background: #FFEB3B;
+}
+
+.demo__grid > :nth-child(5) {
+  background: #8BC34A;
+}
+
+.demo__grid > :nth-child(6) {
+  background: #E91E63;
+}
+
+.demo__grid > :nth-child(7) {
+  background: #009688;
+}
+
+.demo__grid > :nth-child(8) {
+  background: #FFC107;
+}
+
+.demo__grid > :nth-child(9) {
+  background: #3F51B5;
+}
+
+.demo__grid > :nth-child(10) {
+  background: #F44336;
+}
+
+.demo__grid > :nth-child(11) {
+  background: #7C4DFF;
+}
+
+.demo__grid > * {
+  padding: 1rem;
+}
+
+.text__light {
+  color: #fffd;
+}
+

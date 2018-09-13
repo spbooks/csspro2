@@ -3,18 +3,61 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CSS Master: Chapter 5 - Animation direction</title>
+        <title>CSS Master: Chapter 6 - Animation direction</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../../css/base.css">
-        <link rel="stylesheet" href="../../css/chapter5/animsimple.css">
-	</head>
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <style>
+          .animation__direction__demos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .animate {
+            text-align: center;
+          }
+
+          @keyframes pulse {
+            from {
+              transform: scale(0.5);
+              opacity: .8;
+            }
+            to {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .svgwrap {
+            padding: 1em;
+          }
+
+          .pulse svg {
+            animation: pulse 500ms infinite;
+          }
+
+          .rev svg {
+            animation-direction: reverse;
+          }
+
+          .alt svg {
+            animation-direction: alternate;
+          }
+
+          .alt-rev svg {
+            animation-direction: alternate-reverse;
+          }
+
+          button > * {
+            pointer-events: none;
+          }
+        </style>
+  	</head>
         
     <body>
        <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
-            <a href="../index.html">Back to listing</a>
+            <nav><a href="../index.html">Back to chapter demo list</a></nav>
         </header>
 
         <main class="content">  
@@ -22,7 +65,8 @@
             <p><em>NOTE: The animations below flicker and pulse. If you have a physical condition that may be triggered by such animations, please don't use this demo.</em><br><br>
                 <button type="button" class="stopanim" data-classname="pulse">Toggle all</button>
             </p>
-            <div class="flex">
+
+            <div class="animation__direction__demos">
 
             <section class="animate">
                 <h3>normal</h3>
@@ -89,9 +133,7 @@
             </p>
         </footer>
 
-   
-
-        <script type="text/javascript" src="../../js/chapter5/stop-anim.js"></script>
+       <script type="text/javascript" src="../js/stop-anim.js"></script>
 
     </body>
 </html>

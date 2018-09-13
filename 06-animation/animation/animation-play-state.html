@@ -3,18 +3,64 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CSS Master: Chapter 5 - animation-play-state</title>
+        <title>CSS Master: Chapter 6 - animation-play-state</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../fonts/fonts.css">
         <link rel="stylesheet" href="../../css/base.css">
-        <link rel="stylesheet" href="../../css/chapter5/anim-play-state.css">
-	</head>
+        <style>
+        html, body {
+          height: 100%;
+        }
+
+        .square {
+          position: relative;
+        }
+
+        .svgwrap {
+          height: 300px;
+          margin: 100px;
+          width: 100%;
+          max-width: 300px;
+        }
+        .svgwrap img {
+          width: 100%;
+          display: block;
+        }
+
+        @keyframes wobble {
+          from {
+            transform: skewY(45deg);
+          }
+          to {
+            transform: skewY(-45deg);
+          }
+        }
+        .wobble {
+          animation: wobble 1s ease-in infinite forwards alternate;
+          animation-play-state: paused;
+        }
+
+        .running {
+          -webkit-animation-play-state: running;
+          animation-play-state: running;
+        }
+
+        .half {
+          -webkit-align-self: flex-start;
+          align-self: flex-start;
+        }
+
+        .finite {
+          animation-iteration-count: 5;
+        }
+        </style>
+	  </head>
         
     <body>
        <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
-            <a href="../index.html">Back to listing</a>
+            <nav><a href="../index.html">Back to chapter demo list</a></nav>
         </header>
 
         <main class="content">  
@@ -26,7 +72,7 @@
                 </p>
 
                 <div class="svgwrap wobble">
-                    <img src="../../images/csscircle.svg">
+                    <img src="../img/csscircle.svg">
                 </div>         
             </section>
 
@@ -41,7 +87,7 @@
 
    
 
-        <script type="text/javascript" src="../../js/chapter5/play-pause.js"></script>
+        <script type="text/javascript" src="../js/play-pause.js"></script>
 
     </body>
 </html>

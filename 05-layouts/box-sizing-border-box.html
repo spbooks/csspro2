@@ -6,24 +6,25 @@
         <title>CSS Master: box-sizing: border-box</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/chapter4/box-sizing.css">
-        <script src="../js/chapter4/box-sizing.js" defer></script>
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="./css/box-sizing.css">
+        <script src="./js/box-sizing.js" defer></script>
     </head>
 
     <body>
         <header>
-            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
-            <a href="./index.html">Back to listing</a>
+            <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+            <a href="./index.html">Back to chapter demo list</a>
         </header>
 
         <main class="content">
             <h2>Using <code>box-sizing</code><code> </code></h2>
-            <p>Select a value to see its effect on the layout below. Both of the yellow boxes have an initial <code>box-sizing</code> value of <code>content-box</code>. The first box has a <code>width</code> value of 60%. The second has a <code>width</code> value of 40% (<a href="http://www.w3.org/TR/css3-ui/#box-sizing">Related specification</a>).</p>
+            <p>Select a value to see its effect on the layout below. Both of the yellow boxes have an initial <code>box-sizing</code> value of <code>content-box</code>. The first box has a <code>width</code> value of 60%. The second has a <code>width</code> value of 40%.</p>
+
+            <p><b>Related specification:</b> <a href="https://drafts.csswg.org/css-sizing-3/">CSS Intrinsic & Extrinsic Sizing Module Level 3</a>.</p>
             <form id="change-box-sizing">
-               <p></p>
-                <div class="flex flexl">
+                <div>
                     <p>
                         <input type="radio" name="box-sizing" id="content-box" value="content-box" checked>
                         <label for="content-box"><code>content-box</code></label>

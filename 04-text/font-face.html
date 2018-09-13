@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Master: Chapter 4: Working with Text</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <style>
+      /*
+      Note here that AbhayaLibre and AbhayaLibreBold are identifiers.
+      You might find it more effective to use identifiers that describe the font
+      purpose instead of the font name, e.g.: MainBodyText and HeadingText. You
+      can use almost any name here.
+      */ 
+      @font-face {
+          font-family: 'AbhayaLibre';
+          src: url('abhayalibre/AbhayaLibre-Regular-webfont.woff') format('woff'),
+               url('abhayalibre/c7ac44c2e123e1741b8fa898c36597af2.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'AbhayaLibreExtraBold';
+          src: url('abhayalibre/AbhayaLibre-ExtraBold-webfont.woff') format('woff'),
+               url('abhayalibre/ba4d2c5ae73fbecf06c0620419a66e112.woff2') format('woff2');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'AbhayaLibreBold';
+          src: url('abhayalibre/AbhayaLibre-Bold-webfont.woff') format('woff'),
+               url('abhayalibre/c5a79edf01b2e8aafd19b29be8b306902.woff2') format('woff2');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      .demo__wrapper {
+        font-family: 'AbhayaLibre', serif;
+        font-size: 2.3rem;
+      }
+      .demo__wrapper h1, .exbold {
+        font-family: 'AbhayaLibreExtraBold', serif;
+        font-size: 3.45rem;
+      }
+
+      .exbold {
+        font-size: inherit
+      }
+
+      .demo__wrapper p {
+        margin: 2rem 0;
+      }
+      h1 code {
+        font-family: inherit;
+      }
+      .demo__wrapper code {
+        font-size: 90%;
+      }
+      .demo__wrapper em, .bold {
+        font-family: 'AbhayaLibreBold', serif;
+        font-style: normal;
+      }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+          <h2>A <b>simple</b> <code>@font-face</code> example</h2>
+          <p>This entire collection of demos uses <code>@font-face</code>, but this is a contained example.</p>
+ 
+         <section class="demo__wrapper">
+            <h1>Using <code>@font-face</code> with Abhaya Libre</h1>
+        
+            <p>This font family is Abhaya Libre from <a href="http://mooniak.com/fonts/">Mooniak</a>, a Colombo, Sri Lanka-based design collective. You will see it used again in the <a href="http://localhost:8000/04-text/unicode-ranges.html"><code>unicode-range</code> demo</a>.</p>
+
+            <p>We've used the <span class="exbold">Abhaya Libre Extra Bold</span> face for the heading, <span class="reg">Abhaya Libre Regular</span> for paragraph text, and <span class="bold">Abhaya Libre Bold</span> for emphasized text (<code>&lt;em&gt;</code>). Notice in that this example, we need to use a <em>separate font file</em> for each weight or style &mdash; three in total.</p>
+            <p>With <a href="variable-fonts.html">variable fonts</a>, that's no longer the case.</p>
+
+          </section>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+    </body>
+</html>

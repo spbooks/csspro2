@@ -6,9 +6,9 @@
         <title>CSS Master: Chapter 6 - transform-origin</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/chapter6/rotate.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="./css/rotate.css">
         <!-- deliberately empty -->
         <style></style>
    </head>
@@ -16,7 +16,7 @@
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./index.html">Back to listing</a>
+            <a href="./index.html">Back to chapter demo list</a>
         </header>
 
         <main class="content">
@@ -25,12 +25,12 @@
             <p>Adjust the slider to rotate the object below.</p>
 
 
-            <div class="flex">
+            <form class="flex">
                 <b>-360</b>
                 <input type="range" id="angle" name="angle" min="-360" max="360" value="0" step="5">
                 <b>360</b>
-            </div>
-            <object id="rotate" data="../images/csscircle.svg" type="image/svg+xml"></object>
+            </form>
+            <object id="rotate" data="./img/csscircle.svg" type="image/svg+xml"></object>
 
 
             <div class="flexl conversion">
@@ -49,11 +49,11 @@
         </footer>
 
 
-        <script type="text/javascript">
-            var rulestr = '#rotate{transform: rotate(%s)';
-        </script>
+      <script type="text/javascript">
+          var rulestr = '#rotate{transform: rotate(%s)';
+      </script>
 	    <script type="text/javascript" src="../js/convertangles.min.js"></script>
-		<script type="text/javascript" src="../js/escapereset.js"></script>
-        <script type="text/javascript" src="../js/chapter6/rotations.js"></script>
+		  <script type="text/javascript" src="../js/escapereset.js"></script>
+      <script type="text/javascript" src="./js/rotations.js"></script>
     </body>
 </html>

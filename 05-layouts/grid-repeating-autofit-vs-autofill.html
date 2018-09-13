@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Repeating grids(CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        code {
+          white-space: nowrap;
+        }
+        .demo__grid {
+          display: grid;
+          font-size: 3rem;
+          font-weight: 100;
+          width: 1000px;
+        }
+        .demo__grid h2 {
+          font: inherit;
+        }
+        .demo__grid p {
+          font-size: 1.6rem;
+        }
+
+        .demo__grid__autofill {
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .demo__grid__autofit {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h2>Repeating grids, alternate version</h2>
+        <p>The first grid in this example uses <code>grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))</code> while the second uses <code>grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))</code>. Use Firefox&apos; Developer Tools in order to view this demo. Its grid inspection tools are currently the state of the art.</p>
+
+        <p><code>auto-fill</code> <em>fills-in</em> the remaining space with anonymous grid items.</p>
+
+        <p><code>auto-fit</code> <em>fits</em> the items within the remaining space, expanding or shrinking as necessary.</p>
+
+        <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+       <h3>Auto-fill</h3>
+       <div class="demo__grid demo__grid__autofill">
+          <div>Grid item A</div>
+          <div class="text__light">Grid item B</div>
+          <div>Grid item C</div>
+          <div>Grid item D</div>
+          <div>Grid item E</div>
+        </div>
+
+       <h3>Auto-fit</h3>
+       <div class="demo__grid demo__grid__autofit">
+          <div>Grid item A</div>
+          <div class="text__light">Grid item B</div>
+          <div>Grid item C</div>
+          <div>Grid item D</div>
+          <div>Grid item E</div>
+        </div>
+
+
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

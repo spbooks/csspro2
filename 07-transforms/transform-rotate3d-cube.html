@@ -6,9 +6,9 @@
         <title>CSS Master: Chapter 6 - rotate3d</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../js/html5shiv.min.js"></script>
         <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/chapter6/rotate.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="./css/rotate.css">
         <style>
         #rotate{}
         </style>
@@ -17,14 +17,14 @@
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 6</h1>
-            <a href="./index.html">Back to listing</a>
+            <a href="./index.html">Back to chapter demo list</a>
         </header>
 
         <main class="content">  
             <h2><code id="output">transform: rotate3d(<span>0</span>, <span>0</span>, <span>0</span>, <span>0</span>deg)</code></h2>
             
             <form>
-                <p>Adjust the slider to rotate the object below. (
+                <p>Adjust the values below to rotate the object below. (
                     <input type="checkbox" id="addpersp" name="addpersp">
                     <label for="addpersp">Add <code>perspective: 200px</code> to container</label>)
                 </p> 
@@ -128,8 +128,8 @@
         <script type="text/javascript">    
             var rulestr = '#rotate{transform: rotate3d(%s)';         
         </script>
-		<script type="text/javascript" src="../js/convertangles.min.js"></script>
-		<script type="text/javascript" src="../js/escapereset.js"></script>
-        <script type="text/javascript" src="../js/chapter6/rotate3d.js"></script>
+		    <script type="text/javascript" src="../js/convertangles.min.js"></script>
+		    <script type="text/javascript" src="../js/escapereset.js"></script>
+        <script type="text/javascript" src="./js/rotate3d.js"></script>
     </body>
 </html>

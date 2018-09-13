@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Repeating grids(CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        code {
+          white-space: nowrap;
+        }
+        .demo__grid {
+          font-size: 3rem;
+          font-weight: 100;
+          display: grid;
+          grid-template: repeat(4, auto) / repeat(3, 1fr);
+          /*
+            For grid-supporting browsers that don't yet support column-gap
+            and row-gap. Can also use the `grid-gap` shorthand.
+          */
+          grid-column-gap: 1rem;
+          grid-row-gap: 1rem;
+          /* Could also use the `gap` shorthand */
+          column-gap: 1rem;
+          row-gap: 1rem;
+        }
+
+        .demo__grid h2 {
+          font: inherit;
+        }
+        .demo__grid p {
+          font-size: 1.6rem;
+        }
+
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h1>Adding gutters with the <code>gap</code> property</h1>
+        <p>Grid items do not have space between them by default. Instead we need to add gaps or <strong>gutters</strong> using the <code>column-gap</code> and <code>row-gap</code> properties. We can also use the <code>gap</code> shorthand property.</p>
+
+<p>Note that some browsers that support grid do not support these properties yet. You can use the older, <code>grid-column-gap</code> and <code>grid-row-gap</code> properties for those browsers. We can also use the <code>gap</code> shorthand property (or its <code>grid-gap</code> predecessor).</p>
+
+<p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+       <div class="demo__grid">
+          <div>Grid item A</div>
+          <div class="text__light">Grid item B</div>
+          <div>Grid item C</div>
+          <div>
+            <h2>Grid item D</h2>
+            <p>This grid item contains more content than its siblings.</p>
+          </div>
+          <div>Grid item E</div>
+          <div class="text__light">Grid item F</div>
+          <div class="text__light">Grid item G</div>
+          <div>Grid item H</div>
+          <div class="text__light">Grid item I</div>
+          <div class="text__light">Grid item J</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

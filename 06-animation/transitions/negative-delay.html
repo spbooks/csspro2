@@ -3,18 +3,58 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CSS Master: Chapter 5 - Negative delay</title>
+        <title>CSS Master: Chapter 6 - Negative delay</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../../js/html5shiv.min.js"></script>
+        <link rel="stylesheet" href="../../fonts/fonts.css">
         <link rel="stylesheet" href="../../css/base.css">
-        <link rel="stylesheet" href="../../css/chapter5/negative-delay.css">
+        <style>
+        section {
+          background: #ececff;
+          border: 1px solid #96f;
+          border-radius: 3px;
+          height: auto;
+          margin: 1em 0;
+          padding: 2em;
+          position: relative;
+        }
+        section:before, section:after {
+          display: block;
+          clear: both;
+        }
+        section h3 {
+          margin: -10px 0 0 0;
+          font-size: 18px;
+        }
+        section div {
+          background: #96f;
+          height: 5em;
+          height: 10vw;
+          margin: 10px 0;
+          position: relative;
+          left: 0;
+          top: 0;
+          transition: 2s ease-in;
+          width: 5em;
+          width: 10vw;
+          max-height: 200px;
+          max-width: 200px;
+        }
+
+        .moved {
+          left: 90%;
+        }
+
+        .delay1s {
+          transition-delay: -1s;
+        }
+        </style>
 	</head>
         
     <body>
         <header>
             <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
-            <a href="../index.html">Back to listing</a>
+            <nav><a href="../index.html">Back to chapter demo list</a></nav>
         </header>
 
         <main class="content">  
