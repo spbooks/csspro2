@@ -660,3 +660,8 @@ object {
   display: inline-block;
   width: 100%;
 }
+
+
+.content section {
+  margin-top: 2rem;
+}
