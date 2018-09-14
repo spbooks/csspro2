@@ -1,0 +1,118 @@
+/* Reset margin, padding, and box sizing of everything */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: 300 10px / 1.5 "NotoSansRegular", sans-serif;
+  background: #fff;
+  color: #121212;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header, main, footer {
+  padding: 2rem;
+}
+
+header {
+  background: hsla(264, 34%, 36%, .2);
+  display: flex;
+  align-content: center;
+
+  h1 {
+    flex: 1 0 auto;
+    margin: 0;
+  }
+  a {
+    flex: 0 0 12rem;
+  }
+}
+
+main {
+  max-width: 110rem;
+  margin: 2rem auto;
+}
+
+footer {
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+a {
+  color: hsl(264, 34%, 36%);
+}
+
+a:visited {
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 2rem 0;
+  font-family: 'NotoSerifBold';
+
+  i {
+      font-family: 'NotoSerifBoldItalic';
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.56rem;
+}
+
+h4 {
+  font-size: 2.24rem;
+}
+
+h5 {
+  font-size: 1.92rem;
+}
+
+h6 {
+  font-size: 1.76rem;
+}
+
+/*
+Did you know? You can use unicode with the list-style and list-style-type
+properties, although not every browser supports this.
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+*/
+
+ul {
+  list-style: square;
+  list-style: '\2726';
+  padding-left: 2rem;
+}
+
+li {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+i, em {
+  font-family: 'NotoSansItalic';
+}
+b, strong {
+  font-family: 'NotoSansBold';
+}
+code, pre, {
+  font-family: 'NotoMono';
+}
+
+code {
+  background: hsl(264, 0%, 95%);
+  padding: .1ch;
+}
+
