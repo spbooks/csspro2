@@ -6,7 +6,7 @@
 }
 
 html {
-  font: 300 10px / 1.5 "NotoSansRegular", sans-serif;
+  font: 300 11px / 1.5 "NotoSansRegular", sans-serif;
   background: #fff;
   color: #121212;
 }
@@ -136,4 +136,8 @@ code {
   display: inline-block;
   width: 1rem;
   height: 1rem;
+}
+
+.demo__wrapper p {
+  margin: 3rem 0;
 }

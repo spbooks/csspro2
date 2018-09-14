@@ -24,6 +24,14 @@
       }
 
       @font-face {
+          font-family: 'AbhayaLibreExtraBold';
+          src: url('abhayalibre/AbhayaLibre-ExtraBold-webfont.woff') format('woff'),
+               url('abhayalibre/ba4d2c5ae73fbecf06c0620419a66e112.woff2') format('woff2');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      @font-face {
           font-family: 'AbhayaLibreBold';
           src: url('abhayalibre/AbhayaLibre-Bold-webfont.woff') format('woff'),
                url('abhayalibre/c5a79edf01b2e8aafd19b29be8b306902.woff2') format('woff2');
@@ -35,15 +43,27 @@
         font-family: 'AbhayaLibre', serif;
         font-size: 2.3rem;
       }
-      .demo__wrapper h1 {
-        font-family: 'AbhayaLibreBold', serif;
+      .demo__wrapper h1, .exbold {
+        font-family: 'AbhayaLibreExtraBold', serif;
         font-size: 3.45rem;
       }
+
+      .exbold {
+        font-size: inherit
+      }
+
       .demo__wrapper p {
         margin: 2rem 0;
       }
       h1 code {
         font-family: inherit;
+      }
+      .demo__wrapper code {
+        font-size: 90%;
+      }
+      .demo__wrapper em, .bold {
+        font-family: 'AbhayaLibreBold', serif;
+        font-style: normal;
       }
     </style>
     </head>
@@ -63,7 +83,9 @@
         
             <p>This font family is Abhaya Libre from <a href="http://mooniak.com/fonts/">Mooniak</a>, a Colombo, Sri Lanka-based design collective. You will see it used again in the <a href="http://localhost:8000/04-text/unicode-ranges.html"><code>unicode-range</code> demo</a>.</p>
 
-            <p>We've used the Abhaya Libre Bold face for the heading, and the Abhaya Libre Regular face for paragraph text.</p>
+            <p>We've used the <span class="exbold">Abhaya Libre Extra Bold</span> face for the heading, <span class="reg">Abhaya Libre Regular</span> for paragraph text, and <span class="bold">Abhaya Libre Bold</span> for emphasized text (<code>&lt;em&gt;</code>). Notice in that this example, we need to use a <em>separate font file</em> for each weight or style &mdash; three in total.</p>
+            <p>With <a href="variable-fonts.html">variable fonts</a>, that's no longer the case.</p>
+
           </section>
         </main>
 

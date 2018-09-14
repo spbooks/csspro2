@@ -10,13 +10,77 @@
     <link rel="stylesheet" href="../fonts/fonts.css">
     <style>
       @font-face {
-          font-family: 'AbhayaLibreBold';
-          src: url('abhayalibre/AbhayaLibre-Bold-webfont.woff') format('woff'),
-               url('abhayalibre/c5a79edf01b2e8aafd19b29be8b306902.woff2') format('woff2');
-          font-weight: bold;
-          font-style: normal;
+          font-family: 'Amstelvar';
+          src: url('amstelvar/fonts/Amstelvar-Roman-blended-VF.ttf') format('truetype-variations');
+          /* Future-proof format syntax. See http://clagnut.com/blog/2391 */
+          src: url('amstelvar/fonts/Amstelvar-Roman-blended-VF.ttf') format('truetype', supports variations);
+          font-weight: 100 900;
+      }
+      @font-face {
+          font-family: 'AmstelvarItal';
+          src: url('amstelvar/fonts/Amstelvar-Italic-VF.ttf') format('truetype-variations');
+          /* Future-proof format syntax. See http://clagnut.com/blog/2391 */
+          src: url('amstelvar/fonts/Amstelvar-Italic-VF.ttf') format('truetype', supports variations);
+          font-style: italic;
+          font-weight: 100 900;
       }
 
+
+      .demo__wrapper {
+        font-family: 'Amstelvar';
+        font-weight: 400;
+      }
+      h1 {
+        font-family: inherit;
+      }
+      .demo__wrapper * {
+        font-family: inherit;
+        font-size: 2rem;
+      }
+
+      .demo__wrapper em {
+        font-weight: 450;
+      }
+
+     .demo__wrapper i.amstelvarital {
+        font-style: italic;
+        font-family: 'AmstelvarItal';
+      }
+
+      .amstelvar__weights :first-child {
+        font-weight: 100;
+      }
+
+
+      .amstelvar__weights :last-child {
+        font-weight: 900;
+      }
+
+      .amstelvar__weights :nth-child(2) {
+        font-weight: 200;
+      }
+
+      .amstelvar__weights :nth-child(3) {
+        font-weight: 300;
+      }
+      .amstelvar__weights :nth-child(4) {
+        font-weight: 350;
+      }
+      .amstelvar__weights :nth-child(5) {
+        font-weight: 400;
+      }
+      .amstelvar__weights :nth-child(6) {
+        font-weight: 500;
+      }
+      .amstelvar__weights :nth-child(7) {
+        font-weight: 528;
+      }
+      .amstelvar__weights :nth-child(8) {
+        font-weight: 600;
+      }
+      .amstelvar__weights :nth-child(9) {
+        font-weight: 800;
+      }
     </style>
     </head>
 
@@ -28,8 +92,32 @@
 
         <main>
           <h2>Using variable fonts</h2>
-         
-          <p>This example uses <a href="https://github.com/TypeNetwork/Amstelvar">Amstelvar</a>, a 
+          <p>A basic, self-contained example that uses higher-level variable font-related properties.
+ 
+         <div class="demo__wrapper">
+            
+            <p>This example uses <a href="https://github.com/TypeNetwork/Amstelvar">Amstelvar</a>, a <q>a parametric variable font by David Berlow.</q> This particular example is a simple one, but perhaps a little profound.</p>
+
+          <p>Unlike the <a href="font-face.html">basic example</a>, in which we use a separate file for each variation in font weight or style, this example uses <em>one</em> file to manage every weight.</p>
+
+        <ul class="amstelvar__weights">
+          <li>This line has a font weight of 100</li>
+          <li>This line has a font weight of 200</li>
+          <li>This line has a font weight of 300</li>
+          <li>This line has a font weight of 350</li>
+          <li>This line has a font weight of 400</li>
+          <li>This line has a font weight of 500</li>
+          <li>This line has a font weight of 528</li>
+          <li>This line has a font weight of 600</li>
+          <li>This line has a font weight of 800</li>
+          <li>This line has a font weight of 900</li>
+        </ul>
+
+<p>Notice here that we are no longer locked into increments of 100 for variable fonts. We can use any value that falls within the range that the font file supports.</p>
+
+        <p>Amstelvar does still require a separate file for <i class="amstelvarital">italicized</i> text. That's a limitation of Amstelvar, not of variable fonts. Without it, this page would serve <i>synthesized</i> or <i>faux</i> italicized text.</p> 
+
+          </section>
         </main>
 
         <footer>
