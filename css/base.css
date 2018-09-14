@@ -58,6 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   font-family: 'NotoSerifBoldItalic', serif;
 }
+h1 b, h1 strong, h2 b, h2 strong, h3 b, h3 strong, h4 b, h4 strong, h5 b, h5 strong, h6 b, h6 strong {
+  font-family: inherit;
+}
 
 h1 {
   font-size: 2rem;
@@ -107,10 +110,6 @@ b, strong {
   font-family: 'NotoSansBold', sans-serif;
 }
 
-code, pre {
-  font-family: 'NotoMono', monospace;
-}
-
 code {
   background: #f2f2f2;
   padding: .1ch;
@@ -122,7 +121,7 @@ code {
   border-radius: .33rem;
 }
 .demo__controls label {
-  font-family: 'NotoMono', monospace;
+  font-family: monospace;
   white-space: pre;
 }
 
