@@ -30,6 +30,7 @@ header h1 {
 }
 header a {
   flex: 0 0 12rem;
+  white-space: nowrap;
 }
 
 main {
@@ -52,10 +53,10 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 2rem 0;
-  font-family: 'NotoSerifBold';
+  font-family: 'NotoSerifBold', serif;
 }
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
-  font-family: 'NotoSerifBoldItalic';
+  font-family: 'NotoSerifBoldItalic', serif;
 }
 
 h1 {
@@ -99,15 +100,15 @@ li {
 }
 
 i, em {
-  font-family: 'NotoSansItalic';
+  font-family: 'NotoSansItalic', sans-serif;
 }
 
 b, strong {
-  font-family: 'NotoSansBold';
+  font-family: 'NotoSansBold', sans-serif;
 }
 
 code, pre {
-  font-family: 'NotoMono';
+  font-family: 'NotoMono', monospace;
 }
 
 code {
@@ -121,7 +122,7 @@ code {
   border-radius: .33rem;
 }
 .demo__controls label {
-  font-family: 'NotoMono';
+  font-family: 'NotoMono', monospace;
   white-space: pre;
 }
 
