@@ -7,6 +7,8 @@
 
 html {
   font: 300 10px / 1.5 "NotoSansRegular", sans-serif;
+  background: #fff;
+  color: #121212;
 }
 
 body {
@@ -33,6 +35,10 @@ header a {
 main {
   max-width: 110rem;
   margin: 2rem auto;
+}
+
+main > * + * {
+  margin: 3rem 0;
 }
 
 footer {
@@ -77,11 +83,12 @@ h6 {
 }
 
 /*
-Did you know? You can use unicode the list-style and list-style-type
-properties.
+Did you know? You can use unicode with the list-style and list-style-type
+properties, although not every browser supports this.
 See: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
 */
 ul {
+  list-style: square;
   list-style: '\2726';
   padding-left: 2rem;
 }
@@ -97,4 +104,36 @@ i, em {
 
 b, strong {
   font-family: 'NotoSansBold';
+}
+
+code, pre {
+  font-family: 'NotoMono';
+}
+
+code {
+  background: #f2f2f2;
+  padding: .1ch;
+}
+
+.demo__controls {
+  background: #f2f2f2;
+  padding: 2rem;
+  border-radius: .33rem;
+}
+.demo__controls label {
+  font-family: 'NotoMono';
+  white-space: pre;
+}
+
+.two__panels {
+  display: flex;
+}
+.two__panels *:first-child {
+  margin-right: 3rem;
+}
+
+.tiny__swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
 }

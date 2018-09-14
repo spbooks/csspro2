@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Master: Chapter 3: Custom properties and the cascade</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <style>
+        :root {
+          --primary-color: hsl(190, 95%, 51%);
+        }
+
+        body {
+          --primary-color: hsl(10, 95%, 51%);
+        } 
+
+        svg:not(.tiny__swatch) {
+          display: block;
+          height: auto;
+          margin: auto;
+          width: 30rem;
+          fill: var(--primary-color);
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 3 Custom Properties</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+            
+          <h2>Custom properties and the cascade</h2>
+          <p>The cascade also applies to custom properties. We've set the value of <code>--primary-color:</code> to <code>hsl(190, 95%, 51%);</code><svg width="5" height="5" class="tiny__swatch">
+            <title>Turquoise blue</title>
+            <rect x="0" y="0" width="100%" height="100%" fill="#0bd1f9" />
+          </svg>
+
+ as part of the <code>:root</code> rule set, and redefined it as <code>hsl(280, 95%, 51%)</code><svg width="5" height="5" class="tiny__swatch">
+            <title>Hot purple</title>
+            <rect x="0" y="0" width="100%" height="100%" fill="#f9330b" />
+          </svg> it in the <code>body</code> rule set, which follows <code>:root</code>.<p>
+
+        <p>Use your browser's developer tools to toggle the <code>    --primary-color: hsl(10, 95%, 51%);</code> rule on and off.</p>
+
+
+          <svg width="100" height="100">
+            <title>Primary color swatch</title>
+            <rect x="0" y="0" width="100%" height="100%" />
+          </svg>
+        
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+
+<script>
+// Grabs the label text. Using mostly to keep things consistent.
+const vartxt = document.querySelector('[for=defined]').firstChild.nodeValue;
+const logo = document.getElementsByTagName('svg')[0];
+const form = document.getElementsByTagName('form')[0];
+
+const css = logo.style.cssText;
+
+function setVar() {
+  logo.style.cssText = `${vartxt};${logo.style.cssText};`
+};
+
+function unsetVar() {
+  logo.style.cssText = css.replace(vartxt,'');
+};
+
+window.addEventListener('load', setVar);
+
+
+form.addEventListener('change', function(event) {
+  if(event.target.checked) {
+    setVar();
+  } else {
+    unsetVar();
+  }
+});
+</script>
+
+    </body>
+</html>

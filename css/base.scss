@@ -38,6 +38,10 @@ main {
   margin: 2rem auto;
 }
 
+main > * + * {
+  margin: 3rem 0;
+}
+
 footer {
   font-size: 1.3rem;
   text-align: right;
@@ -53,10 +57,10 @@ a:visited {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 2rem 0;
-  font-family: 'NotoSerifBold';
+  font-family: 'NotoSerifBold', serif;
 
   i {
-      font-family: 'NotoSerifBoldItalic';
+      font-family: 'NotoSerifBoldItalic', serif;
   }
 }
 
@@ -102,13 +106,13 @@ li {
 }
 
 i, em {
-  font-family: 'NotoSansItalic';
+  font-family: 'NotoSansItalic', sans-serif;
 }
 b, strong {
-  font-family: 'NotoSansBold';
+  font-family: 'NotoSansBold', sans-serif;
 }
 code, pre, {
-  font-family: 'NotoMono';
+  font-family: 'NotoMono', monospace;
 }
 
 code {
@@ -116,3 +120,27 @@ code {
   padding: .1ch;
 }
 
+.demo__controls {
+  background: hsl(264, 0%, 95%);
+  padding: 2rem;
+  border-radius: .33rem;
+
+  label {
+    font-family: 'NotoMono', monospace;
+    white-space: pre;
+  }
+}
+
+.two__panels {
+  display: flex;
+  
+  *:first-child {
+    margin-right: 3rem;
+  }
+}
+
+.tiny__swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
