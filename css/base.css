@@ -128,7 +128,7 @@ code {
 .two__panels {
   display: flex;
 }
-.two__panels *:first-child {
+.two__panels > *:first-child {
   margin-right: 3rem;
 }
 

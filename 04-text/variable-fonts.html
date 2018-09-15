@@ -51,6 +51,9 @@
         font-weight: 100;
       }
 
+      .demo__wrapper b {
+        font-weight: 500;
+      }
 
       .amstelvar__weights :last-child {
         font-weight: 900;
@@ -79,6 +82,9 @@
         font-weight: 600;
       }
       .amstelvar__weights :nth-child(9) {
+        font-weight: 700;
+      }
+     .amstelvar__weights :nth-child(10) {
         font-weight: 800;
       }
     </style>
@@ -98,7 +104,7 @@
             
             <p>This example uses <a href="https://github.com/TypeNetwork/Amstelvar">Amstelvar</a>, a <q>a parametric variable font by David Berlow.</q> This particular example is a simple one, but perhaps a little profound.</p>
 
-          <p>Unlike the <a href="font-face.html">basic example</a>, in which we use a separate file for each variation in font weight or style, this example uses <em>one</em> file to manage every weight.</p>
+          <p>Unlike the <a href="font-face.html">basic example</a>, which uses a separate file for each variation in font weight or style, this example uses <em>one</em> file for every weight.</p>
 
         <ul class="amstelvar__weights">
           <li>This line has a font weight of 100</li>
@@ -109,15 +115,18 @@
           <li>This line has a font weight of 500</li>
           <li>This line has a font weight of 528</li>
           <li>This line has a font weight of 600</li>
+          <li>This line has a font weight of 700</li>
           <li>This line has a font weight of 800</li>
           <li>This line has a font weight of 900</li>
         </ul>
 
-<p>Notice here that we are no longer locked into increments of 100 for variable fonts. We can use any value that falls within the range that the font file supports.</p>
+            <p>Notice that variable fonts mean that we are no longer locked into font-weight increments of 100. We can use any value that falls within the range that the font file supports.</p>
 
-        <p>Amstelvar does still require a separate file for <i class="amstelvarital">italicized</i> text. That's a limitation of Amstelvar, not of variable fonts. Without it, this page would serve <i>synthesized</i> or <i>faux</i> italicized text.</p> 
+                    <p>Amstelvar does still require a separate file for <i class="amstelvarital">italicized</i> text. That's a limitation of Amstelvar, not of variable fonts.</p> 
 
-          </section>
+            <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-fonts-4/" class="amstelvarital">CSS Fonts Module Level 4</a></p>
+
+          </div>
         </main>
 
         <footer>
