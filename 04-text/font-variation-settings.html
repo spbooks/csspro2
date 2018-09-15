@@ -173,7 +173,7 @@
 
                 <p>
                   <label for="YTSE">YTSE</label><span class="setting__explain" id="YTSE-explain">(serif height / serif rise)</span>
-                  <input type="range" id="YTSE" name="YTSE" min="0" max="48" value="18" aria-describedby="YTSE-explain" step=".01">
+                  <input type="range" id="YTSE" name="YTSE" min="1" max="50" value="18" aria-describedby="YTSE-explain" step=".01">
                   <output class="range__label"></output>
                 </p>
 
@@ -210,19 +210,15 @@
           const form = document.querySelector('.font__variation__settings');
           const demo = document.querySelector('.demo__wrapper');
           
-          const updateFontVariationSetting = () => {
-            const values = Array.from(form.elements).filter((el) => el.nodeName === 'INPUT').map((e) => {
-              if(e.nodeName === 'INPUT') {
-                return { name: e.name, value: e.value };
-              } 
-            });
-            
+          const findInputs = (el) => el.nodeName === 'INPUT';
+
+          const buildfontVariationSettings = (arrayOfNameValueObjects, formObject) => {
             /* Set the value of `font-size` */
-            const fontSize = values.shift();
+            const fontSize = arrayOfNameValueObjects.shift();
             demo.style.setProperty(fontSize.name, `${fontSize.value}rem`);
             form[fontSize.name].nextElementSibling.value = form[fontSize.name].value;
 
-            const fvs = values.map((item) => {            
+            const fvs = arrayOfNameValueObjects.map((item) => {            
               form[item.name].nextElementSibling.value = item.value;     
               return `"${item.name}" ${item.value}`;
             });
@@ -230,9 +226,29 @@
             demo.style.fontVariationSettings = fvs.join(', ');
           }
 
+          const updateFontVariationSetting = (domEvent) => {
+            const target = domEvent.currentTarget;
+  
+            const values = Array.from(target.elements).filter(findInputs).map((e) => {
+              return { name: e.name, value: e.value };
+            });
+            
+            buildfontVariationSettings(values);
+          }
+
+          const resetHandler = (domEvent) => {
+            const values = Array.from(domEvent.target.elements).filter(findInputs).map((e) => {
+              // getAttribute returns the authored DOM value,
+              // instead of the current value.
+              return { name: e.name, value: e.getAttribute('value') };
+            });
+            buildfontVariationSettings(values);
+          }
+
           form.addEventListener('input', updateFontVariationSetting);
           form.addEventListener('submit', (domEvent) => domEvent.preventDefault());
-          window.addEventListener('load', updateFontVariationSetting);
+          form.addEventListener('reset', resetHandler);
+          window.addEventListener('load', () => {const inputEvent = new Event('input'); form.dispatchEvent(inputEvent)});
         </script>
     </body>
 </html>
