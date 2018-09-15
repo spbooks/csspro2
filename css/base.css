@@ -125,6 +125,15 @@ code {
   white-space: pre;
 }
 
+button {
+  background: #7959a6;
+  border: 0px;
+  border-radius: .3rem;
+  color: #fff;
+  font: inherit;
+  padding: .5rem 2rem;
+}
+
 .two__panels {
   display: flex;
 }

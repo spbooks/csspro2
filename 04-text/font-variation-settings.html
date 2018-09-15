@@ -40,17 +40,19 @@
       .demo__wrapper b {
         font-weight: 500;
       }
-      .font__variation__settings {
-        padding: 0;
-      }
+
       .font__variation__settings p + p {
         margin: 2rem 0;
       }
       .font__variation__settings > div {
-        height: 40rem;
-        overflow-y: auto;
         padding: 2rem;
       }
+
+      .font__variation__settings > :first-child,
+      .font__variation__settings > :last-child {
+        text-align: right;
+      }
+
       .setting__explain {
         margin-left: 6ch;
         font-size: 1.2rem;
@@ -78,10 +80,10 @@
             </div>
 
             <form action="/none" method="GET" class="demo__controls font__variation__settings">  
-              <div>
+                <p><button type="reset">Reset all</button></p>
                 <p>
                   <label for="font-size">font-size</label>
-                  <input type="range" id="font-size" name="font-size" min="8" max="144" value="12">
+                  <input type="range" id="font-size" name="font-size" min="1" max="144" value="3">
                   <output class="range__label"></output>
                 </p>
 
@@ -188,7 +190,7 @@
                   <input type="range" id="PWTH" name="PWTH" min="75" max="1179" value="490" aria-describedby="PWTH-explain">
                   <output class="range__label"></output>
                 </p>
-
+                <p><button type="reset">Reset all</button></p>
 
               </div>
 
@@ -226,10 +228,10 @@
             });
 
             demo.style.fontVariationSettings = fvs.join(', ');
-          
           }
 
           form.addEventListener('input', updateFontVariationSetting);
+          form.addEventListener('submit', (domEvent) => domEvent.preventDefault());
           window.addEventListener('load', updateFontVariationSetting);
         </script>
     </body>
