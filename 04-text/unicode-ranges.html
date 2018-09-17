@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Master: Chapter 4: Working with Text: Using @font-face with unicode-range</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <style>
+      @font-face {
+        font-family: 'SubsetFontExample';
+        src: url('./abhayalibre/ErbiLayahba-Latin.woff') format('woff');
+        unicode-range: 'U+0000-007F';
+      }
+
+      @font-face {
+        font-family: 'SubsetFontExample';
+        src: url('./abhayalibre/ErbiLayahba-Sinhala.woff') format('woff');
+        unicode-range: 'U+0D80–0DEF';
+      }
+
+      .demo__wrapper {
+        font-size: 4rem;
+        font-family: 'SubsetFontExample', sans-serif;
+        line-height: 1.25;
+      }
+      </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+          <h2>Using <code>@font-face</code> with <code>unicode-range</code></h2>
+          <p>A subset font uses a different file for each unicode range. Unicode ranges can be a few specific characters, or entire scripts. In this case, we've split AbhayaLibre into two files: one containing a Latin subset of characters, and one containing a Sinhalese subset.</p>
+          <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-fonts-4/" class="amstelvarital">CSS Fonts Module Level 4</a>.</p>
+
+          <div class="demo__wrapper">
+            <p>This sentence is an example of English-language text typeset using AbhayaLibre.
+            <p>මමෙම වාක්යය අබායා ලිබ්ර් භාවිතා කරමින් සිංහල අකුරු වර්ගයේ උදාහරණයකි.</p>
+         
+          </div>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+    </body>
+</html>

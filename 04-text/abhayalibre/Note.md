@@ -9,3 +9,5 @@ AbhayaLibre-Regular-webfont.woff is c7ac44c2e123e1741b8fa898c36597af2.woff2
 AbhayaLibre-SemiBold-webfont.woff is 30d00dc4ca3e81ebe8af984fd60f88932.woff2
 AbhayaLibre-ExtraBold-webfont.woff is ba4d2c5ae73fbecf06c0620419a66e112.woff2
 AbhayaLibre-Medium-webfont.woff is 213379fe18b1071f078a3f39949142f22.woff2
+
+ErbiLayahba-Sinhala.woff and ErbiLayahba-Latin.woff are subset versions of AbhayaLibre-Medium-webfont.woff for Sinhalese and Latin characters, respectively.

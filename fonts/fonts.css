@@ -24,17 +24,6 @@
 }
 
 @font-face {
-  font-family: 'NotoSerifRegular';
-  src: url('../fonts/NotoSerif-Regular-webfont.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'NotoSerifItalic';
-  src: url('../fonts/NotoSerif-Italic-webfont.woff') format('woff');
-  font-style: italic;
-}
-
-@font-face {
   font-family: 'NotoSerifBoldItalic';
   src: url('../fonts/NotoSerif-BoldItalic-webfont.woff') format('woff');
   font-weight: bold;

@@ -6,7 +6,7 @@
 }
 
 html {
-  font: 300 10px / 1.5 "NotoSansRegular", sans-serif;
+  font: 300 11px / 1.5 "NotoSansRegular", sans-serif;
   background: #fff;
   color: #121212;
 }
@@ -30,6 +30,7 @@ header {
   }
   a {
     flex: 0 0 12rem;
+    white-space: nowrap;
   }
 }
 
@@ -60,7 +61,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'NotoSerifBold', serif;
 
   i {
-      font-family: 'NotoSerifBoldItalic', serif;
+    font-family: 'NotoSerifBoldItalic', serif;
+  }
+
+  b, strong {
+    font-family: inherit;
   }
 }
 
@@ -111,9 +116,6 @@ i, em {
 b, strong {
   font-family: 'NotoSansBold', sans-serif;
 }
-code, pre, {
-  font-family: 'NotoMono', monospace;
-}
 
 code {
   background: hsl(264, 0%, 95%);
@@ -126,15 +128,24 @@ code {
   border-radius: .33rem;
 
   label {
-    font-family: 'NotoMono', monospace;
+    font-family: monospace;
     white-space: pre;
   }
+}
+
+button {
+  background: hsl(265, 30%, 50%);
+  border: 0px;
+  border-radius: .3rem;
+  color: #fff;
+  font: inherit;
+  padding: .5rem 2rem;
 }
 
 .two__panels {
   display: flex;
   
-  *:first-child {
+  > *:first-child {
     margin-right: 3rem;
   }
 }
@@ -143,4 +154,8 @@ code {
   display: inline-block;
   width: 1rem;
   height: 1rem;
+}
+
+.demo__wrapper p {
+  margin: 3rem 0;
 }
