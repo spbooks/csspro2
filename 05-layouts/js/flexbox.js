@@ -190,11 +190,6 @@ var init = function () {
 
     setProp('.demo', 'align-items', document.getElementById('align-items-demo').value);
 
-    document.querySelector('#same_height').addEventListener('change', function (evt) {
-        [].map.call(document.querySelectorAll('li:nth-child(even)'), function (li) {
-            li.classList.toggle('quarter');
-        });
-    });
 };
 
 window.addEventListener('load', init);

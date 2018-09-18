@@ -2,13 +2,6 @@ html, body {
   height: 100%;
 }
 
-.warning {
-  padding: .5em;
-}
-.warning p {
-  margin: 0;
-}
-
 ul {
   list-style: none;
   margin: 0;
@@ -25,6 +18,10 @@ form {
   padding: 1rem;
 }
 
+form p {
+  margin: .5rem 0;
+}
+
 input:not([type=checkbox]),
 select {
   border: 1px solid #ccc;
@@ -36,7 +33,6 @@ select {
 }
 
 [type=text] {
-  -webkit-transition: all 100ms;
   transition: all 100ms;
 }
 [type=text][disabled], [type=text]:disabled {
@@ -59,11 +55,11 @@ fieldset[data-affect] legend {
   position: relative;
   top: 1.2rem;
 }
+
 fieldset.closed > div {
   max-height: 0;
 }
 fieldset > div {
-  -webkit-transition: max-height 250ms;
   transition: max-height 250ms;
   height: auto;
   max-height: 1000px;
@@ -93,7 +89,7 @@ legend {
 
 .note {
   color: #333;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 .note code {
   font-style: normal;
@@ -102,8 +98,6 @@ legend {
 .demo {
   background: #607d8b;
   height: 600px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -124,29 +118,28 @@ form {
 }
 
 .demo-flex {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
+  overflow-x: auto;
 }
 .demo-flex > * {
   flex: 0 1 50%;
 }
+
 .demo-flex li {
-  font-size: .8rem;
   min-height: 6rem;
-  padding: 1%;
-}
-.demo-flex .quarter {
-  height: 50%;
-}
-.demo-flex li > p {
-  speak: none;
+  padding: 1rem;
 }
 
 .flex-item-id {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   text-align: center;
+}
+
+.flex-item-id p {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: left;
 }
 
 .alpha {
@@ -170,7 +163,6 @@ form {
 }
 
 .flex-shorthand {
-  font-size: 1.1rem;
   font-weight: bold;
 }
 
