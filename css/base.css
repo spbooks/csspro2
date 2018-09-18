@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset margin, padding, and box sizing of everything */
 *, *::before, *::after {
   margin: 0;
@@ -6,7 +7,7 @@
 }
 
 html {
-  font: 300 11px / 1.5 "NotoSansRegular", sans-serif;
+  font: 300 11px/1.5 "NotoSansRegular", sans-serif;
   background: #fff;
   color: #121212;
 }
@@ -34,7 +35,6 @@ header a {
 }
 
 main {
-  max-width: 110rem;
   margin: 2rem auto;
 }
 
@@ -57,10 +57,10 @@ a:visited {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 2rem 0;
-  font-family: 'NotoSerifBold', serif;
+  font-family: "NotoSerifBold", serif;
 }
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
-  font-family: 'NotoSerifBoldItalic', serif;
+  font-family: "NotoSerifBoldItalic", serif;
 }
 h1 b, h1 strong, h2 b, h2 strong, h3 b, h3 strong, h4 b, h4 strong, h5 b, h5 strong, h6 b, h6 strong {
   font-family: inherit;
@@ -97,7 +97,7 @@ See: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
 */
 ul {
   list-style: square;
-  list-style: '\2726';
+  list-style: "✦";
   padding-left: 2rem;
 }
 
@@ -107,22 +107,22 @@ li {
 }
 
 i, em {
-  font-family: 'NotoSansItalic', sans-serif;
+  font-family: "NotoSansItalic", sans-serif;
 }
 
 b, strong {
-  font-family: 'NotoSansBold', sans-serif;
+  font-family: "NotoSansBold", sans-serif;
 }
 
 code {
   background: #f2f2f2;
-  padding: .1ch;
+  padding: 0.1ch;
 }
 
 .demo__controls {
   background: #f2f2f2;
   padding: 2rem;
-  border-radius: .33rem;
+  border-radius: 0.33rem;
 }
 .demo__controls label {
   font-family: monospace;
@@ -132,10 +132,10 @@ code {
 button {
   background: #7959a6;
   border: 0px;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   color: #fff;
   font: inherit;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .two__panels {
@@ -153,4 +153,22 @@ button {
 
 .demo__wrapper p {
   margin: 3rem 0;
+}
+
+[id=change-box-sizing] > div {
+  display: flex;
+}
+
+.note {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+input,
+select {
+  font: inherit;
 }

@@ -7,10 +7,11 @@ var init = function () {
     form = document.getElementById('multi');
     styleSheet = CSSHelpers.getStyleSheet(CSSHelpers.styleSheetTitle);
 
-    updateStyle = function(e){
+    updateStyle = function(domEvent){
+      console.log(domEvent.target.value)
        var cnval;
 
-       if(e.target.id == 'column-number') {
+       if(domEvent.target.id == 'column-number' || domEvent.target.id == 'column-width') {
             cnval = [];
 
             cnval[0] = document.querySelector('#column-width').value;
@@ -19,8 +20,8 @@ var init = function () {
 
             CSSHelpers.setProp('multi-col', 'columns', cnval.join(''));
        }  else {
-            cnval = e.target.value;
-            CSSHelpers.setProp('multi-col', e.target.id, cnval);
+            cnval = domEvent.target.value;
+            CSSHelpers.setProp('multi-col', domEvent.target.id, cnval);
        }
     }
 

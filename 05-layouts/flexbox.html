@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../fonts/fonts.css">
-        <link rel="stylesheet" href="../css/chapter4/flex.css">
+        <link rel="stylesheet" href="./css/flex.css">
         <style type="text/css" title="FlexDemo">
         .alpha{}
         .beta{}
@@ -26,12 +26,9 @@
         </header>
 
         <main class="content">
-            <div class="warning alpha">
-                <p><b>NOTE</b>: This demo only works in browsers that support the latest version of the Flexbox specification. It will not work in Internet Explorer 10, Firefox &le; 27, Safari &le; 6, or Chrome &le; 20.</p>
-            </div>
-
+           
             <h1>Understanding Flexbox</h1>
-            <p>Adjust the values in the form control to see their effect. Read the <a href="http://dev.w3.org/csswg/css-flexbox-1/">spec</a> for more.</p>
+            <p>Adjust the values in the form control to see their effect. <b>Related specification:</b> <a href="https://drafts.csswg.org/css-flexbox-1/">CSS Flexible Box Layout Module Level 1</a>.</p>
             <div class="col-2 demo-flex">
 
                 <div class="demo-wrapper">
@@ -40,26 +37,38 @@
                 <li class="alpha">
                     <div class="flex-item-id">A</div>
                 </li>
-                <li class="beta quarter">
-                    <div class="flex-item-id">B</div>
+                <li class="beta">
+                    <div class="flex-item-id">
+                      B
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.</p>
+                    </div>
                 </li>
                 <li class="gamma">
                     <div class="flex-item-id">C</div>
+                    
                 </li>
-               <li class="delta quarter">
-                    <div class="flex-item-id">D</div>
+               <li class="delta">
+                    <div class="flex-item-id">
+                      D
+                      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </li>
                 <li class="epsilon">
-                    <div class="flex-item-id">E</div>
+                    <div class="flex-item-id">
+                      E
+                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
                 </li>
 
               </ul></div>
 
                 <form>
-                <p>
-                    <input type="checkbox" name="same_height" id="same_height">
-                    <label for="same_height">Make items the same height</label>
-                </p>
+               
 
                 <fieldset id="container">
                     <legend class="trigger">Flex container properties</legend>
@@ -325,7 +334,7 @@
             </p>
         </footer>
 
-        <script src="../js/chapter4/flexbox.js"></script>
+        <script src="./js/flexbox.js"></script>
         <script src="../js/escapereset.js"></script>
 
     </body>

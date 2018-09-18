@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../fonts/fonts.css">
-        <link rel="stylesheet" href="../css/chapter4/multi-col.css">
+        <link rel="stylesheet" href="./css/multi-col.css">
         <style type="text/css" title="MultiColumn">
         .multi-col {
              columns: 1;
@@ -18,18 +18,21 @@
 
     <body>
         <header>
-            <div class="demonav"><h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
-            <a href="./index.html">Back to chapter demo list</a></div>
+            <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+            <a href="./index.html">Back to chapter demo list</a>
         </header>
 
 
         <main class="content">
-
+        <h2>Understanding multiple column layout</h2>
+        <p>Enter values below in order to understand how multiple-column layout works.</p>
          <form id="multi">
             <div>
             <p>
                 <label for="column-width" class="mono">column-width:</label>
-                <input type="text" id="column-width" pattern="auto|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" value="auto" size="6">
+                <input type="text" id="column-width" pattern="auto|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" value="auto" size="6" aria-describedby="column-width-note">
+                <br><span class="note" id="column-width-note">Should be a length such as <code>100px</code> or <code>30rem</code>. Percentages and negative values are invalid.</span>
+
             </p>
 
             <p>
@@ -44,8 +47,8 @@
 
             <p>
                 <label for="column-rule-width" class="mono">column-rule-width: </label>
-                <input type="text" id="column-rule-width" value="medium" pattern="thin|thick|medium|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" size="7">
-                <br><span class="note">Should be a keyword such as <code>thin</code>,  <code>thick</code>,<br>or <code>medium</code>  or a length such as <code>2em</code>, or <code>10px</code>.</span>
+                <input type="text" id="column-rule-width" value="medium" pattern="thin|thick|medium|[0-9]{1,}(px|em|rem|ch|ex|vw|vh|vmin|vmax|cm|mm|in|pt|pc)" size="7" aria-describedby="column-rule-width-note">
+                <br><span class="note" id="column-rule-width-note">Should be a keyword such as <code>thin</code>,  <code>thick</code>,<br>or <code>medium</code>  or a length such as <code>2em</code>, or <code>10px</code>.</span>
             </p>
 
             <p>
@@ -66,16 +69,14 @@
 
              <p>
                 <label for="column-rule-color" class="mono">column-rule-color: </label>
-                <input type="text" id="column-rule-color" size="12" value="transparent">
-                <br><span class="note">Should be a valid color value.</span>
+                <input type="text" id="column-rule-color" size="12" value="transparent" aria-describedby="column-rule-color">
+                <br><span class="note" id="column-rule-color-note">Should be a valid color value.</span>
             </p>
             </div>
 
             <p>
-                <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
             </p>
-
          </form>
 
           <div class="multi-col">
@@ -119,7 +120,7 @@
 
         <script src="../js/escapereset.js"></script>
         <script src="../js/css.js"></script>
-        <script src="../js/chapter4/muticol.js"></script>
+        <script src="./js/muticol.js"></script>
 
     </body>
 </html>

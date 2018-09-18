@@ -35,7 +35,6 @@ header {
 }
 
 main {
-  max-width: 110rem;
   margin: 2rem auto;
 }
 
@@ -53,7 +52,7 @@ a {
 }
 
 a:visited {
-  
+  color: hsl(199.5, 18.3%, 36.1%); 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -158,4 +157,22 @@ button {
 
 .demo__wrapper p {
   margin: 3rem 0;
+}
+
+[id=change-box-sizing] > div {
+  display: flex;
+}
+
+.note {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+input,
+select {
+  font: inherit;
 }

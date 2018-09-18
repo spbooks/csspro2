@@ -3,7 +3,7 @@
    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Multiple Column Layout (CSS Master)</title>
+        <title>Multiple Column Layout: column-span property (CSS Master)</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="../js/escapereset.js" defer></script>
@@ -14,13 +14,13 @@
 
     <body>
        <header>
-            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
+            <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
             <a href="./index.html">Back to chapter demo list</a>
         </header>
 
         <main>
            <article class="multi-col-span serif">
-               <h1>Dog bites man; says man tastes like chicken</h1>
+               <h1>Dog bites man; says man tastes like chicken and that she enjoyed that bite</h1>
                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non feugiat ligula. Integer felis erat, consectetur eget libero vitae, feugiat faucibus turpis. In hac habitasse platea dictumst. Vestibulum dignissim lorem eu scelerisque hendrerit. Sed condimentum interdum diam sed vulputate. Fusce quis arcu vel mi fringilla imperdiet sit amet sit amet felis. Sed et sollicitudin nisl. Donec gravida arcu sodales sodales tristique. Donec posuere nisi nec sem ullamcorper venenatis. Ut et tincidunt sapien, ultricies luctus diam. Cras tincidunt tincidunt ex, pulvinar viverra ex rutrum ut. Fusce felis tortor, sodales nec ligula in, lacinia viverra turpis. Donec ut eros quam.</p>
                 <p>
                 Aenean non purus ante. Donec egestas feugiat semper. Nulla pharetra mauris ipsum, vel facilisis nisi commodo a. Nunc et lacus imperdiet, sodales augue sit amet, consectetur sapien. Proin nec feugiat ligula. Nunc aliquet elit dolor, et tempor quam accumsan sed. Fusce sollicitudin metus non volutpat bibendum. Donec velit sem, rhoncus nec nunc non, vulputate porta lectus. Praesent a sem eu est aliquam pharetra. Etiam pharetra lacus id tempus semper. Nulla quis metus dolor.
@@ -61,12 +61,14 @@
 
         <script>
             (function() {
-                if(!CSS.supports('(column-span: all)') &&
-                   !CSS.supports('(-moz-column-span: all)') &&
-                   !CSS.supports('(-webkit-column-span: all)')) {
-                        var div = document.createElement('div'),
-                            txt = "Your browser doesn't support <code>col-span</code> in any form.",
-                            mcs = document.querySelector('main').querySelector('.multi-col-span');
+                if(
+                  !CSS.supports('(column-span: all)') &&
+                  !CSS.supports('(-moz-column-span: all)')
+                ) {
+                    var div = document.createElement('div'),
+                        txt = "Your browser doesn't yet support <code>column-span</code> or an equivalent property.",
+                        mcs = document.querySelector('main').querySelector('.multi-col-span');
+
                         div.innerHTML = txt;
                         div.classList.add('notice');
                         div.classList.add('txtc');
