@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Master: Chapter 4: Working with Text: Managing Typesetting with text-orientation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <style>
+      
+      [lang=jp] {
+        display: flex;
+        /*
+          In a vertical writing mode, the flex-direction is also vertical.
+          When `flex-direction: row`, boxes will stack vertically.
+
+          To get them to stack horizontally, use flex-direction: column
+        */
+        writing-mode: vertical-rl;
+        flex-direction: column; 
+        width: 100%;
+      }
+      
+      [lang=jp] p {
+        font-size: 3rem;
+        flex: 1 1 33%;
+        margin: 0 5rem;
+      }
+
+      code {
+        font-family: monospace;
+        white-space: nowrap;
+      }
+      .mixed {
+        text-orientation: mixed;
+      }
+      .upright {
+        text-orientation: upright;
+      }
+      .sideways {
+        text-orientation: sideways;
+      }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 4</h1>
+            <nav><a href="index.html">Back to chapter demo list</a></nav>
+        </header>
+
+        <main>
+          <h2>Managing Typesetting with <code>text-orientation</code> </h2>
+          <p>Writing systems, and the fonts that use them, have one or more native orientations. Latin, Arabic, and Devangari-based scripts are always written horizontally, and therefore have a horizontal native orientation. Mongolian script is always written vertically and has a vertical native orientation. Chinese, Japanese, and Korean can be written vertically or horizontally, which is known as bidirectional orientation. Native orientation helps determine how glyphs are displayed within a document.</p>
+
+          <p>When characters from horizontal scripts are used in text with a vertical orientation, they're rotated by 90&deg;. We can change that with <code>text-orientation</code>.</p>
+
+          <p>English-to-Japanese translation by <a href="https://translate.google.com">Google Translate</a>. <b>Related specification:</b> <a href="https://www.w3.org/TR/css-writing-modes-4/">CSS Writing Modes Level 4</a>.</p>
+
+          
+          <div lang="jp">
+            <p class="mixed"><code lang="en">mixed</code> これは、数字80とこれが出版された年、2018を含むテキスト行です。</p>
+
+            <p class="upright"><code lang="en">upright</code> これは、数字80とこれが出版された年、2018を含むテキスト行です。</p>
+
+            <p class="sideways"><code lang="en">sideways</code> これは、数字80とこれが出版された年、2018を含むテキスト行です。</p>
+          </div>
+    
+          
+        </div>
+     </main>
+
+    <footer>
+        <p>
+            Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+    </footer>
+  </body>
+</html>
