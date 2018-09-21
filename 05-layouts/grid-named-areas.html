@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Named Grid Areas (CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+
+      <style>
+        code {
+          white-space: nowrap;
+        }
+
+        .demo__grid {
+          display: grid;
+          font-size: 1.6rem;
+          grid-template: repeat(2, auto) / 4fr 1fr;
+          /*
+          Line breaks are not required in the value of grid-template-areas, but
+          they make the grid easier to visualize and understand.
+          */
+          grid-template-areas: "pagehead pagehead"
+                               "mains navigation"
+                               "pagefoot pagefoot";
+          margin: 0 -2rem;
+        }
+
+        .demo__grid header {
+          background: #121212;
+          padding: 1rem;
+          grid-area: pagehead;
+        }
+
+        .demo__grid article {
+          grid-area: mains;
+        }
+
+        .demo__grid nav {
+          grid-area: navigation;
+        }
+
+        .demo__grid footer {
+          grid-area: pagefoot;
+          display: flex;
+          align-items: center;
+        }
+
+        .demo__grid footer > * {
+            margin: 0;
+        }
+
+        .demo__grid header > svg {
+          width: 20rem;
+          height: auto;
+          display: block;
+          margin: auto;
+        }
+
+        [id=search] {
+          width: 20px;
+          height: 20px;
+          margin-right: .5rem;
+          vertical-align: middle
+        }
+
+        .demo__grid nav {
+          padding: 0 2rem;
+          background: #444a;
+          color: white;
+        }
+
+        .demo__grid nav a, .demo__grid footer a{
+          color: white;
+        }
+        .demo__grid nav ul {
+          list-style: none;
+          padding-left: 0;
+        }
+
+        .demo__grid img {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
+
+        .demo__grid footer {
+          background: #f30;
+          color: #fff;
+          padding: 1rem;
+
+        }
+
+        .demo__grid footer ul {
+          flex: 1 1 60%;
+          display: flex;
+          list-style: none;
+          font-family: 'Work Sans', sans-serif;
+          text-transform: uppercase;
+          justify-content: flex-end;
+          align-items: flex-end;
+          padding-left: 0;
+          font-weight: bold;
+          margin: 0
+        }
+
+        .demo__grid footer li {
+          margin: 0 1rem;
+        }
+
+        .demo__grid nav a {
+          text-decoration: none;
+          padding-right: 2rem;
+        }
+
+        .demo__grid article {
+          padding: 2rem;
+        }
+
+        .demo__grid article h1 {
+          font-size: 4rem;
+          letter-spacing: -.1ch;
+          margin: 1rem 0 0;
+        }
+
+        .demo__grid article h2 {
+          margin: .5rem 0;
+        }
+
+        .demo__grid article p {
+          margin: .75rem 0;
+        }
+
+        .demo__grid .preps {
+          margin: 1rem 0
+        }
+
+  
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h2>Using named grid areas</h2>
+        <p>We can also use named areas in conjunction with <code>grid-template</code> to create grid layouts. [View this demo in <a href="grid-named-areas-isolated.html" target="_blank">isolation</a>.]</p>
+
+        <p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+        <div class="demo__grid">
+       <header>
+          <object tabindex="-1" class="svg_object" id="svg_pelican" data="./img/grid-demo-logo.svg" type="image/svg+xml" title="Good Recipes!"></object>
+      </header>
+
+        <article>
+
+            <h1>Tuna with zucchini noodles</h1>
+            <div class="preps"><b>Prep time:</b> 40 minutes. <b>Cook time:</b> 30 minutes. Total: 1 hour, 10 minutes.</div>
+            <div>
+               <!-- Photo from https://www.pexels.com/photo/food-dish-food-photography-tuna-110814/ -->
+              <img src="./img/dinner-food-food-photography-110814.jpg">
+            </div>
+
+
+              <h2>Ingredients</h2>
+              <ul>
+                  <li>1 lb fresh tuna</li>
+                  <li>1 large zucchini, cut into noodle-like spirals</li>
+                  <li>1 14oz can crushed plum tomatoes</li>
+                  <li>1 small onion, diced</li>
+                  <li>2 cloves garlic</li>
+                  <li>2 tbsp canola oil</Li>
+                  <li>Salt and pepper to taste</li>
+                </ul>
+
+            <h2>Directions</h2> 
+
+            <p>Throw everything into a warm skillet.</p>
+            <p>Cook the fish until it's flaky and delicious and the zucchini is no longer crunchy.</p>
+            <p>This is obviously not a real recipe, but these ingredients probably would make a pretty tasty meal. </p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue ligula in quam varius, sagittis sodales arcu laoreet.</p>
+
+        </article>
+
+      <nav>
+            <ul>
+              <li><a href="">Breakfast</a></li>
+              <li><a href="">Lunch</a></li>
+              <li><a href="">Dinner</a></li>
+              <li><a href="">Desserts</a></li>
+              <li><a href="">Your Recipe Box</a></li>
+              <li><br><br><br><br><br><object tabindex="-1" class="svg_object" id="svg_pelican" data="./img/grid-demo-search.svg" type="image/svg+xml" title=""></object>Search</li>
+            </ul>
+          </nav>
+
+          <footer>
+            &copy; 2018 GoodRecipes.
+            <ul>
+              <li><a href="">Terms of Service</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </footer>
+
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>

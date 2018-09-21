@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout: Repeating grids(CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        code {
+          white-space: nowrap;
+        }
+        .demo__grid {
+          font-size: 3rem;
+          font-weight: 100;
+        }
+        .demo__grid h2 {
+          font: inherit;
+        }
+        .demo__grid p {
+          font-size: 1.6rem;
+        }
+        .demo__grid {
+          display: grid;
+          grid: repeat(3, auto) / repeat(4, 1fr);
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h1>Repeating grids</h1>
+        <p>In this example, we've created row and column track lists of <code>1fr</code>, and indicated that these should repeat: <code>grid: repeat(3, auto) / repeat(4, 1fr);</code>. Notice that the <code>auto</code> in <code>repeat(3, auto)</code> means that size of each row to expand or shrink to fit the grid item with the longest content, but <code>repeat(4, 1fr)</code> results in equally-proportioned columns.</p>
+
+<p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+       <div class="demo__grid">
+          <div>Grid item A</div>
+          <div class="text__light">Grid item B</div>
+          <div>Grid item C</div>
+          <div>
+            <h2>Grid item D</h2>
+            <p>This grid item contains more content than its siblings.</p>
+          </div>
+          <div>Grid item E</div>
+          <div class="text__light">Grid item F</div>
+          <div class="text__light">Grid item G</div>
+          <div>Grid item H</div>
+          <div class="text__light">Grid item I</div>
+          <div class="text__light">Grid item J</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>
