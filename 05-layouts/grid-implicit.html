@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>CSS Grid layout (CSS Master)</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../fonts/fonts.css">
+      <link rel="stylesheet" href="./css/grid-base.css">
+      <style>
+        .demo__grid {
+          font-size: 3rem;
+          font-weight: 100;
+        }
+
+        .demo__grid {
+          background: #eee;
+          display: grid;
+          grid-template-columns: 25rem 40rem 25rem;
+          grid-template-rows: 25rem 15rem;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1><i>CSS Master</i> Code Examples: Chapter 5</h1>
+        <a href="./index.html">Back to chapter demo list</a>
+      </header>
+
+      <main>
+        <h1>A simple <b>implicit</b> grid layout</h1>
+        <p>We've explicitly defined three columns for this grid using <code>grid-template-columns: 25rem 40rem 25rem</code> and two rows using <code>grid-template-rows: 25rem 15rem;</code>. But our grid container has eight children. These remaining items are still added to the grid, but the number of rows are implied. The explicitly defined grid columns, and the implied grid rows create an <a href="https://www.w3.org/TR/css-grid-1/#implicit-grids"><strong>implicit grid</strong></a>. Note that the height of the implicit grid items is <code>auto</code>.</p>
+
+
+<p><b>Related specification:</b> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout Module Level 1</a>.</p>
+
+        <div class="demo__grid">
+          <div>Grid item A</div>
+          <div class="text__light">Grid item B</div>
+          <div>Grid item C</div>
+          <div>Grid item D</div>
+          <div>Grid item E</div>
+          <div class="text__light">Grid item F</div>
+          <div class="text__light">Grid item G</div>
+          <div>Grid item H</div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+        </p>
+      </footer>
+    </body>
+</html>
