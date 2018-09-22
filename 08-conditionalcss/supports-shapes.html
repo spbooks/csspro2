@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>@supports with CSS Shapes | CSS Master: Chapter 8</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="./css/supports.css">
+        <style>
+        .shape {
+          background: #f30;
+          float: left;
+          position:relative;
+          width: 300px;
+          height: 300px;
+          margin: 20px;
+        }
+        .shape b {
+          font-size: 3rem;
+          position: absolute;
+          bottom: 0rem;
+          right: 0rem;
+          display: inline-block;
+          padding: 1rem;
+        }
+        .shape b:last-of-type {
+          display: none;
+        }
+
+        p {
+          position: relative;
+          z-index: 2;
+        }
+        @supports(shape-outside: polygon(0 0, 100% 40%, 100% 100%, 50% 100%)) {
+          .shape {
+              background: purple;
+              shape-outside: polygon(0 0, 100% 40%, 100% 100%, 50% 100%);
+              clip-path: polygon(0 0, 100% 40%, 100% 100%, 50% 100%);
+          }
+
+          .shape b:first-of-type {
+            display: none;
+          }
+    
+          .shape b:last-of-type {
+            color: #fff;
+            display: inline-block;
+          }
+        }
+
+
+        </style>
+    </head>
+
+    <body class="nested">
+        <header>
+            <h1><i>CSS Master</i> Code Examples: Chapter 8</h1>
+            <a href="./index.html">Back to chapter demo list</a>
+        </header>
+
+        <main class="content">
+            <h2><code>@supports</code> with CSS shapes demo</h2>
+
+            <p>If the browser supports CSS Shapes, you will see a purple polygon below, otherwise, you'll see an orange square.</p>
+            <div class="demo__shapes">
+              <div class="shape"><b>Orange<br>square</b> <b>Purple<br>polygon</b></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum congue sollicitudin. Nam nibh mi, blandit nec consequat at, imperdiet vel eros. Fusce tincidunt metus in elit euismod, at fringilla nulla condimentum. Ut dictum nibh non ante pretium, in dapibus nulla lobortis. Aenean pharetra porta est, vitae imperdiet lacus eleifend id. Maecenas eget libero a turpis cursus ultrices sed ut risus. Praesent ut vehicula libero. Pellentesque posuere ultrices turpis, a bibendum massa. Proin eleifend in massa id commodo. Nam maximus tempus nisl at aliquam. Phasellus hendrerit dapibus metus id euismod. Nullam tempus, sapien sit amet eleifend mattis, tellus risus tincidunt tellus, quis elementum massa nisi et eros.
+              </p>
+              <p>
+                Quisque aliquet accumsan pretium. Sed at eleifend lacus. Etiam in viverra justo. Integer lorem purus, cursus vel sagittis nec, pulvinar vel tortor. Duis dignissim est id dolor commodo, eu interdum augue eleifend. Morbi enim arcu, ultrices sed massa ut, euismod volutpat metus. Suspendisse dignissim nibh sed eros pharetra, a euismod felis gravida. Duis venenatis massa ipsum, a hendrerit urna ultricies in. Proin cursus magna convallis pellentesque interdum. Nam dapibus ac neque nec viverra. Aliquam tincidunt sed nunc sit amet dignissim. Vivamus ut lacus sed metus hendrerit posuere at sit amet massa. Vivamus sit amet nisl magna. Curabitur scelerisque malesuada dignissim. Fusce quis euismod lacus.
+              </p>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                Examples from <i>CSS Master</i> written by Tiffany B. Brown and published by SitePoint Pty. Ltd. &copy; 2015-2018.
+            </p>
+        </footer>
+    </body>
+</html>
