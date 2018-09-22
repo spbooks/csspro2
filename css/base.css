@@ -1,9 +1,12 @@
 @charset "UTF-8";
 /* Reset margin, padding, and box sizing of everything */
 *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -171,36 +174,4 @@ button {
 input,
 select {
   font: inherit;
-}
-
-.animation__direction__demos {
-  display: grid;
-  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-  justify-content: center;
-}
-
-.animation__direction__demo .animate {
-  text-align: center;
-}
-
-[id=pickfillmode] fieldset {
-  border: 0;
-}
-[id=pickfillmode] legend {
-  font-weight: bold;
-}
-[id=pickfillmode] legend + div {
-  display: flex;
-  padding: 3rem 3rem 3rem 0;
-}
-[id=pickfillmode] div > div {
-  padding: 1rem 1rem 1rem 0;
-}
-
-.animation__events {
-  display: flex;
-}
-
-.animation__events .half {
-  flex: 1 1 50%;
 }
