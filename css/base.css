@@ -175,3 +175,8 @@ input,
 select {
   font: inherit;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+}

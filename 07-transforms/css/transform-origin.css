@@ -53,6 +53,7 @@ label {
   top: 0;
   width: 10em;
   width: 10vw;
+  margin: auto;
   transform-box: border-box;
 }
 .to b {
@@ -125,6 +126,10 @@ label {
   transform-origin: 0% 50%;
 }
 
-.flex b:last-child {
-  padding: 0;
+.demo__transforms {
+  display: flex;
+}
+
+.demo__transforms .to {
+  flex: 1 1 25%;
 }

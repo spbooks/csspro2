@@ -186,4 +186,5 @@
 #skew {
   background: #c09;
   border: 2px solid #000;
+  display: block;
 }

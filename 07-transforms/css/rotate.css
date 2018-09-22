@@ -182,3 +182,24 @@
   -ms-transform: rotate(540deg);
   transform: rotate(540deg);
 }
+
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+h2, form {
+  grid-column-start: span 10;
+}
+#rotate {
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+.conversion__panel {
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
+
+.note, .note + p {
+  grid-column-start: span 10;
+}

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../fonts/fonts.css">
-        <link rel="stylesheet" href="../css/chapter6/scale.css">
+        <link rel="stylesheet" href="./css/scale.css">
         <!-- deliberately empty -->
         <style></style>
    </head>
@@ -25,11 +25,11 @@
             <p>Adjust the slider to scale the object below.</p>
 
             <div class="flex">
-                <b>0</b>
-                <input type="range" id="factor" name="factor" min="-2" max="2" value="1" step=".1">
+                <b>-2</b>
+                <input type="range" id="factor" name="factor" min="-2" max="2" value="0" step=".1">
                 <b>2</b>
             </div>
-            <object id="scale" data="../images/csscircle.svg" type="image/svg+xml"></object>
+            <object id="scale" data="./img/csscircle.svg" type="image/svg+xml"></object>
         </main>
 
 
@@ -43,7 +43,7 @@
         <script type="text/javascript">
             var rulestr = '#scale{transform: scaleY(%s)';
         </script>
-		<script type="text/javascript" src="../js/escapereset.js"></script>
-        <script type="text/javascript" src="../js/chapter6/scale.js"></script>
+		    <script type="text/javascript" src="../js/escapereset.js"></script>
+        <script type="text/javascript" src="./js/scale.js"></script>
     </body>
 </html>

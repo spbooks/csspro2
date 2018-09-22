@@ -150,6 +150,10 @@
   transform-style: preserve-3d;
 }
 
+#scale {
+  display: block;
+}
+
 #output {
   font-size: 2rem;
   margin-top: 2rem;
