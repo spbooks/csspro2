@@ -172,3 +172,13 @@ input,
 select {
   font: inherit;
 }
+
+.animation__direction__demos {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  justify-content: center;
+}
+
+.animate {
+  text-align: center;
+}

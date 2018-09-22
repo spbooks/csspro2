@@ -7,8 +7,74 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../../css/base.css">
-        <link rel="stylesheet" href="../css/animsimple.css">
-	</head>
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <style>
+          @-webkit-keyframes pulse {
+            from {
+              -webkit-transform: scale(0.5);
+              -ms-transform: scale(0.5);
+              transform: scale(0.5);
+              opacity: .8;
+            }
+            to {
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          @keyframes pulse {
+            from {
+              -webkit-transform: scale(0.5);
+              -ms-transform: scale(0.5);
+              transform: scale(0.5);
+              opacity: .8;
+            }
+            to {
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .svgwrap {
+            padding: 1em;
+          }
+
+          .pulse svg {
+            -webkit-animation: pulse 500ms infinite;
+            animation: pulse 500ms infinite;
+          }
+
+          .rev svg {
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+          }
+
+          .alt svg {
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+          }
+
+          .alt-rev svg {
+            -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse;
+          }
+
+          .flex section {
+            width: 25%;
+            text-align: center;
+          }
+          .flex svg {
+            display: block;
+            margin: auto;
+          }
+
+          button > * {
+            pointer-events: none;
+          }
+        </style>
+  	</head>
         
     <body>
        <header>
@@ -21,7 +87,8 @@
             <p><em>NOTE: The animations below flicker and pulse. If you have a physical condition that may be triggered by such animations, please don't use this demo.</em><br><br>
                 <button type="button" class="stopanim" data-classname="pulse">Toggle all</button>
             </p>
-            <div class="flex">
+
+            <div class="animation__direction__demos">
 
             <section class="animate">
                 <h3>normal</h3>
@@ -90,7 +157,7 @@
 
    
 
-        <script type="text/javascript" src="../../js/chapter5/stop-anim.js"></script>
+        <script type="text/javascript" src="../js/stop-anim.js"></script>
 
     </body>
 </html>
